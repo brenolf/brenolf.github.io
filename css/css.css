@@ -9,6 +9,38 @@ body, html {
 
 body {
 	background: #FF685D;
+	overflow: hidden;
+}
+
+.plane {
+	color: #fff;
+	text-shadow: 4px 4px 0px #D1554C;
+	font-size: 15em;
+	position: absolute;
+	z-index: 0;
+	left:-1em; 
+	bottom:-1em;
+}
+
+.plane-animation {
+	-webkit-animation: myfirst 3s;
+	animation: myfirst 3s;
+}
+
+@-webkit-keyframes myfirst {
+    from   {left:-1em; bottom:-1em;}
+    to 	   {left:100%; bottom:100%;}
+}
+
+ul {
+	list-style: none;
+	color: #fff;
+	text-shadow: 3px 3px 0px #D1554C;
+}
+
+li {
+	display: inline-block;
+	margin-right: 2em;
 }
 
 .hi {
@@ -16,10 +48,11 @@ body {
 	left: 0;
 	right: 0;
 	top: 0;
-	bottom: 5em;
+	bottom: 9em;
 	margin: auto;
 	height: 7em;
 	text-align: center;
+	z-index: 1;
 }
 
 .hi span {
@@ -30,13 +63,25 @@ body {
 	text-align: center;
 }
 
-.hi > div {
-	margin-top: 3em;
+.menu {
+	margin-top: 8em;
+}
+
+.menu a, .menu a:active, .menu a:visited {
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.25em;
+	text-shadow: 3px 3px 0px #D1554C;
+}
+
+.menu a:hover {
+	text-decoration: underline;
 }
 
 .bt:active, .bt:visited, .bt {
 	transition: all 0.1s linear;
-	box-shadow: 2px 2px 0px #3d4352;
+	box-shadow: 2px 2px 0px #D1554C;
 	position: relative;
 	display: inline-block;
 	text-align: center;
