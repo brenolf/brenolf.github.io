@@ -2,3 +2,4 @@
 *.sublime-workspace
 *.less
 *.coffee
+.DS_Store
