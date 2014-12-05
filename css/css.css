@@ -8,7 +8,7 @@ body, html {
 }
 
 body {
-	background-color: #FF685D;
+	background: #FF685D;
 }
 
 .hi {
@@ -16,13 +16,42 @@ body {
 	left: 0;
 	right: 0;
 	top: 0;
-	bottom: 0;
+	bottom: 5em;
 	margin: auto;
+	height: 7em;
+	text-align: center;
+}
 
-	height: 120px;
+.hi span {
 	font-size: 4em;
 	font-family: 'Voltaire', sans-serif;
 	color: #fff;
 	text-shadow: 4px 4px 0px #D1554C;
 	text-align: center;
+}
+
+.hi > div {
+	margin-top: 3em;
+}
+
+.bt:active, .bt:visited, .bt {
+	transition: all 0.1s linear;
+	box-shadow: 2px 2px 0px #3d4352;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background: #50576b;
+	border-radius: 50%;
+	font-size: 2em;
+	width: 1em;
+	height: 1em;
+	padding: 0.5em;
+	text-decoration: none;
+	color: #242831;
+	margin-right: 0.5em;
+}
+
+.bt:hover {
+	background: #636e87;
+	color: #fff;
 }
