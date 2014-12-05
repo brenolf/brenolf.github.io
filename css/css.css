@@ -8,7 +8,7 @@ body, html {
 }
 
 body {
-	background: #FF685D;
+	background: #4d84e2;
 	overflow: hidden;
 }
 
@@ -35,7 +35,7 @@ body {
 ul {
 	list-style: none;
 	color: #fff;
-	text-shadow: 3px 3px 0px #D1554C;
+	text-shadow: 3px 3px 0px #384e95;
 }
 
 li {
@@ -59,7 +59,7 @@ li {
 	font-size: 4em;
 	font-family: 'Voltaire', sans-serif;
 	color: #fff;
-	text-shadow: 4px 4px 0px #D1554C;
+	text-shadow: 4px 4px 0px #384e95;
 	text-align: center;
 }
 
@@ -72,31 +72,9 @@ li {
 	color: #fff;
 	font-family: 'Varela Round', sans-serif;
 	font-size: 1.25em;
-	text-shadow: 3px 3px 0px #D1554C;
+	text-shadow: 3px 3px 0px #384e95;
 }
 
 .menu a:hover {
 	text-decoration: underline;
-}
-
-.bt:active, .bt:visited, .bt {
-	transition: all 0.1s linear;
-	box-shadow: 2px 2px 0px #D1554C;
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	background: #50576b;
-	border-radius: 50%;
-	font-size: 2em;
-	width: 1em;
-	height: 1em;
-	padding: 0.5em;
-	text-decoration: none;
-	color: #242831;
-	margin-right: 0.5em;
-}
-
-.bt:hover {
-	background: #636e87;
-	color: #fff;
 }
