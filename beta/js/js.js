@@ -9,3 +9,7 @@ $(document).ready(function(){
 		scrollSpeed: 200
 	});
 });
+
+window.sr = new scrollReveal({
+	reset : true
+});
