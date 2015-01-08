@@ -1,5 +1,3 @@
 *.sublime-project
 *.sublime-workspace
-*.less
-*.coffee
 .DS_Store
