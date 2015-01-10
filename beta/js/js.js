@@ -6,10 +6,10 @@ listener.sequence_combo('up up down down left right left right b a enter', funct
 
 $(document).ready(function(){
 	$('section').snapPoint({
-		scrollSpeed: 200
+		scrollSpeed: 150
 	});
 });
 
 window.sr = new scrollReveal({
-	reset : true
+	// reset : true
 });
