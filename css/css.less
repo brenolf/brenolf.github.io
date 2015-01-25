@@ -287,6 +287,12 @@ h2 {
         color: #ffffff;
     }
 
+    .projects {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
     .arrow {
         position: absolute;
         bottom: 20%;
@@ -331,7 +337,7 @@ h2 {
             bottom: 0;
             left: 0;
             right: 0;
-            width: 90%;
+            width: 80%;
         }
     }
 
@@ -553,8 +559,8 @@ h2 {
         width: 6.3em;
         border-bottom: solid 0.3em darken(#e4d78c, 10%);
         background: #e4d78c;
-        right: 23em;
-        top: 36em;
+        right: 25%;
+        top: 80%;
         text-align: center;
         font-size: 1.1em;
         padding: 1em 0.5em;
@@ -601,13 +607,13 @@ h2 {
     .monitor {
         right: -12em;
         bottom: 0;
-        height: 35em;
+        height: 71%;
     }
 
     .text {
-        width: 23em;
-        font-size: 1.3em;
-        margin-left: 17em;
+        width: 22em;
+        font-size: 1.4em;
+        margin-left: 13em;
 
         span {
             display: block;
@@ -621,11 +627,6 @@ h2 {
             color: #fff;
             margin-bottom: 2em; 
             font-size: 0.9em;
-        }
-
-        .icons {
-            display: inline-block;
-            margin-bottom: 3em;
         }
 
         i {
@@ -709,7 +710,15 @@ h2 {
     }
 }
 
-@media (min-width: 1390px) {
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1390px) {
     body {
         font-size: 16px;
     };
@@ -725,8 +734,8 @@ h2 {
             font-size: 1.4em;
         }
 
-        .postit {
-            top: 38em;  
+        .monitor {
+            height: 65%;
         }
     }
 
@@ -747,8 +756,12 @@ h2 {
             font-size: 1.4em;
         }
 
+        .monitor {
+            height: 60%;
+        }
+
         .postit {
-            top: 42em;  
+            top: 83%;
         }
     }
 
@@ -1048,7 +1061,7 @@ h2 {
 
     .block-1 {
         .hi {
-            font-size: 0.7em;
+            font-size: 0.6em;
         }
     }
 
