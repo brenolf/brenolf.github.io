@@ -37,17 +37,13 @@ $(document).ready(function(){
 			$('.block-4').css({background: colours[current][1]});
 		});
 	});
-
-	// $('section').snapPoint({
-	// 	scrollSpeed: 150
-	// });
 	
+	$('section').snapPoint({
+		scrollSpeed: 150
+	});
+
 	// $('#fullpage').fullpage({
 	// 	verticalCentered: false,
 	// 	scrollingSpeed: 400
 	// });
 });
-
-//window.sr = new scrollReveal({
-	// reset : true
-//});
