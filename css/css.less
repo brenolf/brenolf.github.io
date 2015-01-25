@@ -2,6 +2,7 @@
 
 @blue: #69cee4;
 @gray: #cecbbe;
+@yellow: #f7af41;
 
 ::-moz-selection {
     background: #ffffff;
@@ -48,7 +49,12 @@ h2 {
 }
 
 .bio {
+    padding: 0.5em;
+    color: #000;
     display: none;
+    background: #ececec;
+    text-shadow: 0 2px 0 #cccccc;
+    box-shadow: 0 3px 0 #cccccc;
 }
 
 @font-face {
@@ -245,7 +251,7 @@ h2 {
 }
 
 .block-2 {
-    background: #f7af41;
+    background: @yellow;
     font-size: 2em;
     text-align: center;
     line-height: 1.5em;
@@ -253,7 +259,7 @@ h2 {
     position: relative;
 
     h1 {
-        color: darken(#f7af41, 20%);
+        color: darken(@yellow, 30%);
         display: none;
     }
 
@@ -1060,8 +1066,7 @@ h2 {
         display: block;
         font-size: 1.5em;
         width: 80%;
-        margin-left: 10%;
-        margin-top: 10%;
+        margin: 10% auto 0 auto;
         line-height: 1.4em;
     }
 
@@ -1076,10 +1081,9 @@ h2 {
        }
 
         .text {
-            margin-top: 10em;
             font-size: 2.1em;
             width: 90%;
-            margin: 5em auto 0 auto;
+            margin: 2% auto 0 auto;
             padding: 1em;
         }
 
