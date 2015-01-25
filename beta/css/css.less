@@ -273,9 +273,13 @@ h2 {
 
 .block-4 {
     background: #60a928;
+    transition: background .2s lisnear;
+    -webkit-transition: background .2s linear;
 
     h1 {
         color: darken(#60a928, 20%);
+        transition: color .2s lisnear;
+        -webkit-transition: color .2s linear;
     }
 
     a, a:visited, a:active {
@@ -287,6 +291,7 @@ h2 {
         bottom: 20%;
         color: #ffffff;
         font-size: 8em;
+        cursor: pointer;
 
         &.left {
             left: -@animation_distance;
@@ -305,6 +310,75 @@ h2 {
                 animation: arrow_right 1s infinite;
                 -webkit-animation: arrow_right 1s infinite;
                 -moz-animation: arrow_right 1s infinite;
+            }
+        }
+    }
+
+    .logo, .ctt {
+        float: left;
+    }
+
+    .logo {
+        width: 40%;
+        height: 100%;
+        position: relative;
+
+        img {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .ctt {
+        width: 60%;
+
+        h1 {
+            font-size: 2em;
+            margin: 1em 0;
+            transition: color .2s lisnear;
+            -webkit-transition: color .2s linear;
+        }
+
+        h2 {
+            text-align: left;
+            margin: 1em 0;
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        a {
+            float: right;
+            margin-right: 5em;
+            font-size: 0.7em;
+            letter-spacing: 0.1em;
+            border: solid 1px #777;
+            border-radius: 3px;
+            padding: 0.3em 0.5em;
+            margin-right: 5em;
+            text-align: right;
+            color: #777;
+            text-decoration: none;
+            transition: all .2s lisnear;
+            -webkit-transition: all .2s linear;
+
+            &:hover {
+                background: #777;
+                color: #fff;
+            }
+        }
+
+        ul {
+            color: #777;
+            list-style-position: inside;
+            list-style-type: square;
+            margin-left: 2em;
+
+            li {
+                margin-bottom: 0.5em;
             }
         }
     }
@@ -370,6 +444,11 @@ h2 {
     .panel {
         background-color: #fff;
         height: 30em;
+
+        & > div {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
@@ -433,15 +512,15 @@ h2 {
 
     .postit {
         position: absolute;
-        width: 6em;
+        width: 6.3em;
         border-bottom: solid 0.3em darken(#e4d78c, 10%);
         background: #e4d78c;
         right: 23em;
-        top: 37em;
+        top: 36em;
         text-align: center;
         font-size: 1.1em;
         padding: 1em 0.5em;
-        min-height: 2.2em;
+        min-height: 3em;
         color: darken(#e4d78c, 35%);
     }
 
@@ -493,12 +572,17 @@ h2 {
         margin-left: 17em;
 
         span {
-            display: inline-block;
+            display: block;
             margin-right: 1em;
             line-height: 0.9em;
             font-family: 'Uni Sans',sans-serif;
             color: @darker_colour;
-            width: 9em;
+        }
+
+        .txt {
+            color: #fff;
+            margin-bottom: 2em; 
+            font-size: 0.9em;
         }
 
         .icons {
