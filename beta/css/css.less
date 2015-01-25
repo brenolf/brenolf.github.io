@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@blue: #69cee4;
+@gray: #bac2ce;
+
 @media (min-width:1000px) {
     body {
         font-size: 16px;
@@ -13,9 +16,17 @@
 }
 
 @media (max-width:640px) {
-    body {
+    body { 
         font-size: 6px;
     };
+}
+
+::-moz-selection {
+    background: #ffffff;
+}
+
+::selection {
+    background: #ffffff;
 }
 
 * {
@@ -35,6 +46,7 @@ section {
     height: 100%;
     position: relative;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 h1 {
@@ -70,7 +82,7 @@ h2 {
     float: right;
 }
 
-.purple {
+.block-1 {
     background: #7f1e7b;
 
     .hi {
@@ -155,85 +167,85 @@ h2 {
 
 @keyframes arrow_left {
     0% {
-       left: 0;
+       left: -@animation_distance;
     }
 
     50% {
-        left: -@animation_distance;
+        left: 0;
     }
 
     100% {
-        left: 0;
+        left: -@animation_distance;
     };
 }
 
 @-moz-keyframes arrow_left {
     0% {
-       left: 0;
+       left: -@animation_distance;
     }
 
     50% {
-        left: -@animation_distance;
+        left: 0;
     }
 
     100% {
-        left: 0;
+        left: -@animation_distance;
     };
 }
 
 @-webkit-keyframes arrow_left {
     0% {
-       left: 0;
+       left: -@animation_distance;
     }
 
     50% {
-        left: -@animation_distance;
+        left: 0;
     }
 
     100% {
-        left: 0;
+        left: -@animation_distance;
     };
 }
 
 @keyframes arrow_right {
     0% {
-       right: 0;
+       right: @animation_distance;
     }
 
     50% {
-        right: -@animation_distance;
+        right: 0;
     }
 
     100% {
-        right: 0;
+        right: @animation_distance;
     };
 }
 
 @-moz-keyframes arrow_right {
     0% {
-       right: 0;
+       right: @animation_distance;
     }
 
     50% {
-        right: -@animation_distance;
+        right: 0;
     }
 
     100% {
-        right: 0;
+        right: @animation_distance;
     };
 }
 
 @-webkit-keyframes arrow_right {
     0% {
-       right: 0;
+       right: @animation_distance;
     }
 
     50% {
-        right: -@animation_distance;
+        right: 0;
     }
 
     100% {
-        right: 0;
+        right: @animation_distance;
     };
 }
 
@@ -246,7 +258,7 @@ h2 {
     background: url('../img/me.svg') no-repeat;
 }
 
-.yellow {
+.block-2 {
     background: #f7af41;
     font-size: 2em;
     text-align: center;
@@ -259,7 +271,7 @@ h2 {
     }
 }
 
-.green {
+.block-4 {
     background: #60a928;
 
     h1 {
@@ -277,7 +289,7 @@ h2 {
         font-size: 8em;
 
         &.left {
-            left: 0;
+            left: -@animation_distance;
 
             &:hover {
                 animation: arrow_left 1s infinite;
@@ -287,7 +299,7 @@ h2 {
         }
 
         &.right {
-            right: 0;
+            right: @animation_distance;
 
             &:hover {
                 animation: arrow_right 1s infinite;
@@ -361,15 +373,11 @@ h2 {
     }
 }
 
-.blue {
-    background: #0888e1;
-}
-
-.grey {
-    background: #526e83;
+.block-5 {
+    background: @gray;
 
     h1 {
-        color: darken(#526e83, 20%);
+        color: darken(@gray, 40%);
     }
 
     .wrapper {
@@ -387,13 +395,14 @@ h2 {
     a, a:active, a:visited {
         display: inline-block;
         text-align: center;
-        background: #3e5464;
+        //border: solid 5px lighten(@gray, 20%);
+        background: darken(@gray, 10%);
         border-radius: 10px;
         font-size: 5.5em;
         width: 3em;
         height: 3em;
         line-height: 3em;
-        color: #a6b9c8;
+        color: darken(@gray, 40%);
         text-decoration: none;
         transition: all .2s lisnear;
         -webkit-transition: all .2s linear;
@@ -404,8 +413,107 @@ h2 {
     }
 
     a:hover {
-        background: #7794aa;
-        color: #fff;
+        background: darken(@gray, 40%);
+        //border: solid 5px darken(@gray, 20%);
+        color: @gray;
+    }
+}
+
+.block-3 {
+    background: @blue;
+    @darker_colour: darken(@blue, 25%);
+
+    h1 {
+        color: darken(@darker_colour, 10%);
+    }
+
+    img {
+        position: absolute;
+    }
+
+    .postit {
+        position: absolute;
+        width: 6em;
+        height: 3.4em;
+        border-bottom: solid 0.3em darken(#e4d78c, 10%);
+        background: #e4d78c;
+        right: 23em;
+        top: 37em;
+        text-align: center;
+        font-size: 1.1em;
+        padding-top: 1em;
+        color: darken(#e4d78c, 35%);
+    }
+
+    .r, .g, .b, .pencil {
+        width: 1.5em;
+    }
+
+    .r {
+        left: 7em;
+        bottom: 7em;
+    }
+
+    .g {
+        left: 9.5em;   
+        bottom: 7em;
+    }
+
+    .b {
+        left: 12em;
+        bottom: 7em;
+    }
+
+    .pencil {
+        left: 14.5em;
+        bottom: 8.3em;
+    }
+
+    .eraser {
+        width: 6em;
+        bottom: 26.5em;
+        left: 7em;
+    }
+
+    .ruler {
+        width: 30em;
+        bottom: 1em;
+        left: 7em;
+    }
+
+    .monitor {
+        right: -12em;
+        bottom: 0;
+        height: 35em;
+    }
+
+    .text {
+        width: 23em;
+        font-size: 1.3em;
+        margin-left: 17em;
+
+        span {
+            display: inline-block;
+            margin-right: 1em;
+            line-height: 0.9em;
+            font-family: 'Uni Sans',sans-serif;
+            color: @darker_colour;
+            width: 9em;
+        }
+
+        .icons {
+            display: inline-block;
+            margin-bottom: 3em;
+        }
+
+        i {
+            font-size: 1.5em;
+            color: lighten(@blue, 12%);
+
+            &.yes {
+                color: #fff;
+            }
+        }
     }
 }
 
@@ -424,13 +532,15 @@ h2 {
     text-align: left;
     line-height: 2em;
 
+    @foldcolor: #E16B5F;
+
 
     .fold {
         width: 0;
         height: 0;
         border-style: solid;
         border-width: 2em 2em 0 0;
-        border-color: transparent #ea6c67 transparent transparent;
+        border-color: transparent @foldcolor transparent transparent;
         position: absolute;
         top: 0;
         left: -2em;
@@ -451,7 +561,7 @@ h2 {
         height: 0;
         border-style: solid;
         border-width: 3em 6em 0 0;
-        border-color: #ea6c67 transparent transparent transparent;
+        border-color: @foldcolor transparent transparent transparent;
         position: absolute;
         bottom: -3em;
         left: -2em;
