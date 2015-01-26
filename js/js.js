@@ -14,9 +14,19 @@ function mod (n, m) {
 }
 
 function load () {
-	$('.loader').animate({width: '100%'}, 7000, function(){
+	$('.loader').animate({width: '100%'}, 10000, function(){
 		$('.loader').css({width: '0px'});
-		$('.arrow.right').click();
+		slide(+1);
+	});
+}
+
+function slide (n) {
+	$('#prj-' + current).fadeOut('slow', function(){
+		current = mod(current + n, size);
+		$('#prj-' + current).fadeIn('slow');
+
+		$('.block-4 h1').css({color: colours[current][0]});
+		$('.block-4').css({background: colours[current][1]});
 	});
 }
 
@@ -25,34 +35,17 @@ $(document).ready(function(){
 
 	size = $('.panel > div').length;
 
-	$('.arrow.left').click(function(){
-		$('#prj-' + current).fadeOut('slow', function(){
-			current = mod(current - 1, size);
-			$('#prj-' + current).fadeIn('slow');
-
-			$('.block-4 h1').css({color: colours[current][0]});
-			$('.block-4').css({background: colours[current][1]});
-		});
+	$('.left').click(function(){
+		slide(-1);
 	});
 
-	$('.arrow.right').click(function(){
-		$('#prj-' + current).fadeOut('slow', function(){
-			current = mod(current + 1, size);
-			$('#prj-' + current).fadeIn('slow');
-
-			$('.block-4 h1').css({color: colours[current][0]});
-			$('.block-4').css({background: colours[current][1]});
-		});
+	$('.right').click(function(){
+		slide(+1);
 	});
 	
 	$('section').snapPoint({
 		scrollSpeed: 150
 	});
 
-	setInterval(load, 7005);
-
-	// $('#fullpage').fullpage({
-	// 	verticalCentered: false,
-	// 	scrollingSpeed: 400
-	// });
+	setInterval(load, 10005);
 });
