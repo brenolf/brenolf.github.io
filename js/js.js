@@ -1,6 +1,7 @@
 var listener = new window.keypress.Listener();
 var current = 0, size = 1, loader = 0;
 var timer = null, speed = 10000;
+var transitioning = false;
 
 var phrases = ['P. Sherman, 42, Sidney.', 'Zhu Li, do the thing!', 'To infinity, and beyond!', 'I like to move it, move it', 'The answer is 42', 'Gotta catch\'em all!', 'Brain, what you wanna do tonight?', 'Go, Appa! Yip yip!', 'Azarath metrion zinthos', 'Evaaa, WALL-EEEEE', 'Luke, I am your father'];
 
@@ -22,6 +23,11 @@ function load () {
 }
 
 function slide (n) {
+    if (transitioning)
+        return;
+
+    transitioning = true;
+
     clearTimeout(timer);
     $('.loader').stop().css('width', '0');
 
@@ -32,7 +38,10 @@ function slide (n) {
         $('.block-4 h1').css('color', colours[current][0]);
         $('.block-4, .block-4 b').css('background', colours[current][1]);
 
-        timer = setInterval(load, speed + 5);
+        timer = setInterval(function () {
+            transitioning = false;
+            load();
+        }, speed + 5);
     });
 }
 
