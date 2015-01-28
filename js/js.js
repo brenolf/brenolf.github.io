@@ -1,6 +1,6 @@
 var listener = new window.keypress.Listener();
 var current = 0, size = 1, loader = 0;
-var timer = null, speed = 4000;
+var timer = null, speed = 8000;
 var transitioning = false;
 
 var phrases = ['P. Sherman, 42, Sidney.', 'Zhu Li, do the thing!', 'To infinity, and beyond!', 'I like to move it, move it', 'The answer is 42', 'Gotta catch\'em all!', 'Brain, what you wanna do tonight?', 'Go, Appa! Yip yip!', 'Azarath metrion zinthos', 'Evaaa, WALL-EEEEE', 'Luke, I am your father'];
