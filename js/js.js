@@ -50,8 +50,6 @@ function slide (n) {
 }
 
 $(document).ready(function(){
-    window.sr = new scrollReveal();
-    
     $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
 
     size = $('.panel > div').length;
@@ -65,7 +63,8 @@ $(document).ready(function(){
     });
     
     $('section').snapPoint({
-        scrollSpeed: 150
+        scrollSpeed: 150,
+        outerTopOffset: 300
     });
 
     window.addEventListener('focus', function() {
