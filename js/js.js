@@ -1,4 +1,4 @@
-var listener = new window.keypress.Listener();
+// var listener = new window.keypress.Listener();
 var current = 0, size = 1, loader = 0;
 var timer = null, speed = 8000;
 var transitioning = false;
@@ -7,9 +7,9 @@ var phrases = ['P. Sherman, 42, Sidney.', 'Zhu Li, do the thing!', 'To infinity,
 
 var colours = [['#315714', '#60a928'], ['#172b62', '#5578d7'], ['#000000', '#a5d302'], ['#363435', '#FF6600']];
 
-listener.sequence_combo('up up down down left right left right b a enter', function() {
-    // Make something funky here!
-});
+// listener.sequence_combo('up up down down left right left right b a enter', function() {
+//     // Make something funky here!
+// });
 
 function mod (n, m) {
     return ((n % m) + m) % m;
@@ -50,6 +50,8 @@ function slide (n) {
 }
 
 $(document).ready(function(){
+    window.sr = new scrollReveal();
+    
     $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
 
     size = $('.panel > div').length;
