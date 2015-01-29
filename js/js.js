@@ -52,6 +52,11 @@ function slide (n) {
 $(document).ready(function(){
     $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
 
+    $('section').snapPoint({
+        scrollSpeed: 150,
+        outerTopOffset: 300
+    });
+
     size = $('.panel > div').length;
 
     $('.left').click(function(){
@@ -60,11 +65,6 @@ $(document).ready(function(){
 
     $('.right').click(function(){
         slide(+1);
-    });
-    
-    $('section').snapPoint({
-        scrollSpeed: 150,
-        outerTopOffset: 300
     });
 
     window.addEventListener('focus', function() {
