@@ -52,9 +52,21 @@ function slide (n) {
 $(document).ready(function(){
     $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
 
-    $('section').snapPoint({
-        scrollSpeed: 150,
-        outerTopOffset: 300
+    // $('section').snapPoint({
+    //     scrollSpeed: 150,
+    //     outerTopOffset: 300
+    // });
+
+    $('#fullpage').fullpage({
+        verticalCentered: false,
+        resize: false,
+        loopBottom: true,
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+        menu: '#menu',
+        onLeave: function(index, nextIndex, direction){
+            $('#menu li:nth-child(' + index + ') i').removeClass().addClass('icon-circle-thin');
+            $('#menu li:nth-child(' + nextIndex + ') i').removeClass().addClass('icon-circle');
+        }
     });
 
     size = $('.panel > div').length;
