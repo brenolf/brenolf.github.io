@@ -59,20 +59,6 @@ $(document).ready(function(){
 
     loop();
 
-    $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
-
-    $('#fullpage').fullpage({
-        verticalCentered: false,
-        resize: false,
-        loopBottom: true,
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
-        menu: '#menu',
-        onLeave: function(index, nextIndex, direction){
-            $('#menu li:nth-child(' + index + ') i').removeClass().addClass('icon-circle-thin');
-            $('#menu li:nth-child(' + nextIndex + ') i').removeClass().addClass('icon-circle');
-        }
-    });
-
     size = $('.panel > div').length;
 
     $('.left').click(function(){
@@ -92,8 +78,25 @@ $(document).ready(function(){
         $('#bar').css('width', '0');
     });
 
-    load();
+    $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
 
-    $('#mask').fadeOut();
-    $('.loader span').stop().stop();
+    $('#fullpage').fullpage({
+        verticalCentered: false,
+        resize: false,
+        loopBottom: true,
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
+        menu: '#menu',
+
+        onLeave: function(index, nextIndex, direction) {
+            $('#menu li:nth-child(' + index + ') i').removeClass().addClass('icon-circle-thin');
+            $('#menu li:nth-child(' + nextIndex + ') i').removeClass().addClass('icon-circle');
+        },
+
+        afterRender : function () {
+            load();
+
+            $('#mask').fadeOut();
+            $('.loader span').stop().stop();
+        }
+    });
 });
