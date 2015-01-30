@@ -21,8 +21,8 @@ function load () {
         return;
     }
 
-    $('.loader').animate({width: '100%'}, speed, function(){
-        $('.loader').css('width', '0');
+    $('#bar').animate({width: '100%'}, speed, function(){
+        $('#bar').css('width', '0');
         slide(+1);
     });
 }
@@ -34,7 +34,7 @@ function slide (n) {
     transitioning = true;
 
     clearTimeout(timer);
-    $('.loader').stop().css('width', '0');
+    $('#bar').stop().css('width', '0');
 
     $('#prj-' + current).fadeOut('slow', function(){
         current = mod(current + n, size);
@@ -50,18 +50,22 @@ function slide (n) {
 }
 
 $(document).ready(function(){
-    $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
 
-    // $('section').snapPoint({
-    //     scrollSpeed: 150,
-    //     outerTopOffset: 300
-    // });
+    function loop () {
+        $('.loader span')
+            .animate({opacity: 0.5}, 'slow')
+            .animate({opacity: 1}, 'slow', loop);
+    }
+
+    loop();
+
+    $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
 
     $('#fullpage').fullpage({
         verticalCentered: false,
         resize: false,
         loopBottom: true,
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
         menu: '#menu',
         onLeave: function(index, nextIndex, direction){
             $('#menu li:nth-child(' + index + ') i').removeClass().addClass('icon-circle-thin');
@@ -85,8 +89,11 @@ $(document).ready(function(){
 
     window.addEventListener('blur', function() {
         clearTimeout(timer);
-        $('.loader').css('width', '0');
+        $('#bar').css('width', '0');
     });
 
     load();
+
+    $('#mask').fadeOut();
+    $('.loader span').stop().stop();
 });

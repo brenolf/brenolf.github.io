@@ -21,11 +21,18 @@
 </head>
 <body>
 
+	<div id="mask" class="mask">
+		<div class="loader">
+			<span></span>
+		</div>
+	</div>
+
 	<ul id="menu" class="menu">
 		<li data-menuanchor="firstPage"><a target="_self" href="#firstPage"><i class="icon-circle"></i></a></li>
 		<li data-menuanchor="secondPage"><a target="_self" href="#secondPage"><i class="icon-circle-thin"></i></a></li>
 		<li data-menuanchor="thirdPage"><a target="_self" href="#thirdPage"><i class="icon-circle-thin"></i></a></li>
 		<li data-menuanchor="fourthPage" id="fourth"><a target="_self" href="#fourthPage"><i class="icon-circle-thin"></i></a></li>
+		<li data-menuanchor="fifthPage"><a target="_self" href="#fifthPage"><i class="icon-circle-thin"></i></a></li>
 		<li data-menuanchor="lastPage"><a target="_self" href="#lastPage"><i class="icon-circle-thin"></i></a></li>
 	</ul>
 
@@ -61,15 +68,6 @@
 				</div>
 			</div>
 		</section>
-
-	<!-- 	<section class="block-6 section">
-			<h1>Awards</h1>
-
-			<ul>
-				<li>CSS Light <span>Featured</span></li>
-				<li>CSS Fox <span>Nominee</span></li>
-			</ul>
-		</section> -->
 
 		<section class="block-3 section" data-anchor="thirdPage">
 				<h1>What I do</h1>
@@ -113,7 +111,7 @@
 						<span class="y"></span>
 					</div>
 
-					<div class="loader"></div>
+					<div class="bar" id="bar"></div>
 
 					<div class="panel">
 
@@ -257,6 +255,15 @@
 
 		</section>
 
+		<section class="block-6 section" data-anchor="fifthPage">
+			<h1>Awards</h1>
+
+			<ul>
+				<li><span>CSS Light</span><b>Featured</b></li>
+				<li><span>CSS Fox</span><b>Nominee</b></li>
+			</ul>
+		</section>
+
 
 		<section class="block-5 section" data-anchor="lastPage">
 				<h1>Contact me!</h1>
@@ -275,7 +282,7 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="js/breno.io.min.js"></script>
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
