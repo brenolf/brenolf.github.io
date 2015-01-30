@@ -2,6 +2,7 @@
 var current = 0, size = 1, loader = 0;
 var timer = null, speed = 8000;
 var transitioning = false;
+var modifier = '';
 
 var phrases = ['P. Sherman, 42, Sidney.', 'Zhu Li, do the thing!', 'To infinity, and beyond!', 'I like to move it, move it', 'The answer is 42', 'Gotta catch\'em all!', 'Brain, what you wanna do tonight?', 'Go, Appa! Yip yip!', 'Azarath metrion zinthos', 'Evaaa, WALL-EEEEE', 'Luke, I am your father'];
 
@@ -16,6 +17,8 @@ function mod (n, m) {
 }
 
 function load () {
+    modifier = $('.smaller').css('display') === 'block' ? 's' : '';
+
     if (transitioning) {
         timer = setInterval(load, speed + 5);
         return;
@@ -36,13 +39,13 @@ function slide (n) {
     clearTimeout(timer);
     $('#bar').stop().css('width', '0');
 
-    $('#prj-' + current).fadeOut('slow', function(){
+    $('#prj-' + current + modifier).fadeOut('slow', function(){
         current = mod(current + n, size);
         
         $('.block-4 h1').css('color', colours[current][0]);
         $('.block-4, .block-4 b').css('background', colours[current][1]);
 
-        $('#prj-' + current).fadeIn('slow', function () {
+        $('#prj-' + current + modifier).fadeIn('slow', function () {
             transitioning = false;
             timer = setInterval(load, speed + 5);
         });
