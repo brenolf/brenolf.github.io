@@ -79,6 +79,7 @@ h2 {
 }
 
 .bio {
+    margin-bottom: 0.5em;
     padding: 0.5em;
     color: #000;
     display: none;
@@ -246,36 +247,40 @@ h2 {
         li {
             list-style: none;
             display: inline-block;
-            width: 20em;
-            height: 20em;
             margin: 2em;
-            border-radius: 100%;
-            background: lighten(#F47E35, 30%);
-            position: relative;
-
-            &:after {
-                content: "\e817"; 
-                font-family: 'fontello';
-                font-style: normal;
-                font-weight: normal;
-                text-decoration: inherit;
-                position: absolute;
-                font-size: 15em;
-                text-align: center;
-                width: 100%;
-                color: lighten(#F47E35, 20%);
-                top: 7%;
-                left: 0;
-                z-index: 0;
-            }
 
             a {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                z-index: 2;
-                top: 0;
-                left: 0;
+                display: inline-block;
+                width: 17em;
+                height: 17em;
+                border-radius: 100%;
+                background: lighten(#F47E35, 30%);
+                position: relative;
+                text-decoration: none;
+                opacity: 0.8;
+                transition: all .2s linear;
+                -webkit-transition: all .2s linear;
+
+                &:after {
+                    content: "\e817"; 
+                    font-family: 'fontello';
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 15em;
+                    text-align: center;
+                    width: 100%;
+                    color: lighten(#F47E35, 20%);
+                    top: 7%;
+                    left: 0;
+                    z-index: 0;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+
             }
 
             span {
@@ -372,10 +377,11 @@ h2 {
         background: #ffffff;
         display: none;
 
-        height: 100%;
+        height: 60em;
         width: 80%;
         margin: 0 auto;
         border-radius: 1em;
+        margin-bottom: -2em;
 
         & > div {
             position: relative;
@@ -691,6 +697,7 @@ h2 {
     }
 
     .postit {
+        cursor: pointer;
         position: absolute;
         width: 6.3em;
         border-bottom: solid 0.3em darken(#e4d78c, 10%);
@@ -1196,6 +1203,14 @@ only screen and (min-resolution: 192dpi) {
 }
 
 @media (min-width: 565px) and (max-width: 709px) {
+    section {
+        height: auto !important;
+    }
+
+    .block-1 {
+        height: 60em !important;
+    }
+
     .menu {
         font-size: 1.5em;
     }
@@ -1262,12 +1277,30 @@ only screen and (min-resolution: 192dpi) {
 
     .block-5 {
         a, a:active, a:visited {
-            font-size: 3em;
+            font-size: 2.2em;
+        }
+
+        .wrapper {
+            position: relative !important;
+            width: 8em;
+            height: auto;
+        }
+
+        .msg {
+            position: relative !important
         }
     }
 }
 
 @media (min-width: 100px) and (max-width: 564px) {
+    section {
+        height: auto !important;
+    }
+
+    .block-1 {
+        height: 60em !important;
+    }
+
     .menu {
         font-size: 1.3em;
     }
@@ -1300,7 +1333,7 @@ only screen and (min-resolution: 192dpi) {
         display: block;
         font-size: 1.5em;
         width: 80%;
-        margin: 10% auto 0 auto;
+        margin: 10% auto 1em auto;
         line-height: 1.4em;
     }
 
@@ -1337,14 +1370,18 @@ only screen and (min-resolution: 192dpi) {
     }
 
     .block-5 {
-        .wrapper {
-            width: 13em;
-            height: 50em;
+        a, a:active, a:visited {
+            font-size: 2.2em;
         }
 
-        a, a:active, a:visited {
-            font-size: 3em;
-            display: block;
+        .wrapper {
+            position: relative !important;
+            width: 8em;
+            height: auto;
+        }
+
+        .msg {
+            position: relative !important
         }
     }
 }

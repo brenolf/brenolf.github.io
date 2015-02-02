@@ -30,6 +30,13 @@ function load () {
     });
 }
 
+function change_postit () {
+    $('#postit').animate({top: '+=3%', opacity: 0}, 'fast', function () {
+        $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
+        $('#postit').css('top', '77%').animate({top: '+=3%', opacity: 1}, 'fast');
+    });
+}
+
 function slide (n) {
     if (transitioning)
         return;
@@ -81,7 +88,8 @@ $(document).ready(function(){
         $('#bar').css('width', '0');
     });
 
-    $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
+    $('#postit').click(change_postit);
+    change_postit();
 
     $('#fullpage').fullpage({
         verticalCentered: false,
@@ -89,6 +97,7 @@ $(document).ready(function(){
         loopBottom: true,
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
         menu: '#menu',
+        responsive: 709,
 
         onLeave: function(index, nextIndex, direction) {
             $('#menu li:nth-child(' + index + ') i').removeClass().addClass('icon-circle-thin');
