@@ -20,7 +20,7 @@ function load () {
     modifier = $('.smaller').css('display') === 'block' ? 's' : '';
 
     if (transitioning) {
-        timer = setInterval(load, speed + 5);
+        timer = setTimeout(load, speed + 5);
         return;
     }
 
@@ -54,7 +54,7 @@ function slide (n) {
 
         $('#prj-' + current + modifier).fadeIn('slow', function () {
             transitioning = false;
-            timer = setInterval(load, speed + 5);
+            timer = setTimeout(load, speed + 5);
         });
     });
 }
@@ -85,7 +85,8 @@ $(document).ready(function(){
 
     window.addEventListener('blur', function() {
         clearTimeout(timer);
-        $('#bar').css('width', '0');
+        transitioning = false;
+        $('#bar').stop().css('width', '0');
     });
 
     $('#postit').click(change_postit);
