@@ -5,6 +5,9 @@
 @yellow: #f7af41;
 @orange: #e85e22;
 
+@purple: #441042;
+@breno_colour: #89BAAC;
+
 ::-moz-selection {
     background: #ffffff;
 }
@@ -124,13 +127,13 @@ h2 {
             font-size: 8em;
             font-family: 'Uni Sans',sans-serif;
             font-weight: bold;
-            color: #561453;
+            color: @purple;
             text-align: left;
 
             b {
                font-size: 2em;
                 display: block;
-                color: #b0e000; 
+                color: @breno_colour;
             }
         }
     }
@@ -138,7 +141,7 @@ h2 {
     .down {
         font-size: 10em;
         text-align: center;
-        color: #561453;
+        color: @purple;
         animation: arrow_down 2s infinite;
         -webkit-animation: arrow_down 2s infinite;
         -moz-animation: arrow_down 2s infinite;
@@ -224,7 +227,7 @@ h2 {
 
     li {
         list-style: none;
-        margin-bottom: 0.5em;  
+        margin-bottom: 0.5em;
     }
 
     a, a:visited, a:active {
@@ -262,7 +265,7 @@ h2 {
                 -webkit-transition: all .2s linear;
 
                 &:after {
-                    content: "\e817"; 
+                    content: "\e817";
                     font-family: 'fontello';
                     font-style: normal;
                     font-weight: normal;
@@ -648,7 +651,7 @@ h2 {
     a:hover {
         background: darken(@gray, 5%);
         //border: solid 5px darken(@gray, 20%);
-        
+
         &.icon-twitter {
             color: #51a6e7;
         }
@@ -667,7 +670,7 @@ h2 {
 
         &.icon-mail-alt {
             color: #964b4c;
-        }   
+        }
     }
 
     .msg {
@@ -721,7 +724,7 @@ h2 {
     }
 
     .g {
-        left: 9.5em;   
+        left: 9.5em;
         bottom: 7em;
     }
 
@@ -769,7 +772,7 @@ h2 {
 
         .txt {
             color: #fff;
-            margin-bottom: 2em; 
+            margin-bottom: 2em;
             font-size: 0.9em;
         }
 
