@@ -6,7 +6,15 @@ var gulp        = require('gulp'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify');
 
-gulp.task ('default', ['styles', 'cv']);
+gulp.task ('default', ['styles', 'scripts', 'cv']);
+
+gulp.task ('scripts', function () {
+    return gulp
+    .src('./js/breno.io.js')
+    .pipe(uglify())
+    .pipe(rename('breno.io.min.js'))
+    .pipe(gulp.dest('./js'));
+});
 
 gulp.task ('styles', function () {
     return gulp

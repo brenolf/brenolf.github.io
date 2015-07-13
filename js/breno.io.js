@@ -3,10 +3,11 @@ var current = 0, size = 1, loader = 0;
 var timer = null, speed = 8000;
 var transitioning = false;
 var modifier = '';
+var last = -1;
 
 var phrases = ['P. Sherman, 42, Sidney.', 'Zhu Li, do the thing!', 'To infinity, and beyond!', 'I like to move it, move it', 'The answer is 42', 'Gotta catch\'em all!', 'Brain, what you wanna do tonight?', 'Go, Appa! Yip yip!', 'Azarath metrion zinthos', 'Evaaa, WALL-EEEEE', 'Luke, I am your father'];
 
-var colours = [['#000000', '#E7E737'], ['#324F36', '#60a928'], ['#172b62', '#5578d7'], ['#000000', '#a5d302'], ['#363435', '#FF6600']];
+var colours = [['#000000', '#E7E737'], ['#324F36', '#60a928'], ['#172b62', '#5578d7'], ['#000000', '#a5d302']];
 
 // listener.sequence_combo('up up down down left right left right b a enter', function() {
 //     // Make something funky here!
@@ -31,8 +32,16 @@ function load () {
 }
 
 function change_postit () {
+    var die = last;
+
+    while (die === last) {
+        die = ~~(Math.random() * phrases.length);
+    }
+
+    last = die;
+
     $('#postit').animate({top: '+=3%', opacity: 0}, 'fast', function () {
-        $('#postit').text(phrases[~~(Math.random() * phrases.length)]);
+        $('#postit').text(phrases[die]);
         $('#postit').css('top', '77%').animate({top: '+=3%', opacity: 1}, 'fast');
     });
 }
@@ -48,7 +57,7 @@ function slide (n) {
 
     $('#prj-' + current + modifier).fadeOut('slow', function(){
         current = mod(current + n, size);
-        
+
         $('.block-4 h1').css('color', colours[current][0]);
         $('.block-4, .block-4 b').css('background', colours[current][1]);
 
@@ -98,8 +107,8 @@ $(document).ready(function(){
     $('#fullpage').fullpage({
         verticalCentered: false,
         resize: false,
-        loopBottom: true,
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
+        loopBottom: false,
+        anchors: ['hello', 'me', 'services', 'awards', 'work', 'contact'],
         menu: '#menu',
         responsive: 709,
 
