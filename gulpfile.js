@@ -6,7 +6,8 @@ var gulp        = require('gulp'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify');
 
-gulp.task ('default', ['styles', 'scripts', 'cv']);
+gulp.task ('default', ['styles', 'scripts']);
+gulp.task ('all', ['default', 'cv', 'audience']);
 
 gulp.task ('scripts', function () {
     return gulp
@@ -34,4 +35,14 @@ gulp.task ('cv', function () {
     .pipe(minifyCSS())
     .pipe(concat('css.css'))
     .pipe(gulp.dest('./cv/css'));
+});
+
+gulp.task ('audience', function () {
+    return gulp
+    .src('./audience/less/*.less')
+    .pipe(less())
+    .pipe(prefixer())
+    .pipe(minifyCSS())
+    .pipe(concat('css.css'))
+    .pipe(gulp.dest('./audience/assets/css'));
 });
