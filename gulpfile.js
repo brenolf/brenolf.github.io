@@ -37,7 +37,7 @@ gulp.task ('vendor-styles', function () {
 gulp.task ('styles', ['vendor-styles', 'copy-fonts'], function () {
   return gulp
   .src('./style/*')
-  .pipe(sass())
+  .pipe(sass({includePaths: './style/shims/'}))
   .pipe(prefixer())
   .pipe(minifyCSS())
   .pipe(gulp.dest(assets + '/css'));
