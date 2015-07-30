@@ -1,21 +1,19 @@
 @charset "UTF-8";
 
-@blue: #69cee4;
-@gray: #cecbbe;
-@yellow: #f7af41;
-@orange: #e85e22;
+$blue: #69cee4;
+$gray: #cecbbe;
+$yellow: #f7af41;
+$orange: #e85e22;
 
-@purple: #4C0F49;
-@breno_colour: #b0e000;
+$purple: #4C0F49;
+$breno_colour: #b0e000;
+
+$animation_distance: .07em;
 
 @font-face {
     font-family:'Uni Sans';
     src: url('../font/Uni Sans.woff') format('woff'),
          url('../font/Uni Sans.ttf') format('truetype');
-}
-
-::-moz-selection {
-    background: #ffffff;
 }
 
 ::selection {
@@ -128,14 +126,14 @@ h2 {
             font-size: 8em;
             font-family: 'Uni Sans',sans-serif;
             font-weight: bold;
-            color: @purple;
+            color: $purple;
             text-align: left;
             margin-bottom: -0.5em;
 
             b {
                font-size: 2em;
                 display: block;
-                color: @breno_colour;
+                color: $breno_colour;
             }
         }
     }
@@ -143,14 +141,10 @@ h2 {
     .down {
         font-size: 10em;
         text-align: center;
-        color: @purple;
+        color: $purple;
         animation: arrow_down 2s infinite;
-        -webkit-animation: arrow_down 2s infinite;
-        -moz-animation: arrow_down 2s infinite;
     }
 }
-
-@animation_distance: .07em;
 
 @keyframes arrow_down {
     0% {
@@ -158,35 +152,7 @@ h2 {
     }
 
     50% {
-        margin-top: @animation_distance;
-    }
-
-    100% {
-        margin-top: 0;
-    };
-}
-
-@-moz-keyframes arrow_down {
-    0% {
-        margin-top: 0;
-    }
-
-    50% {
-        margin-top: @animation_distance;
-    }
-
-    100% {
-        margin-top: 0;
-    };
-}
-
-@-webkit-keyframes arrow_down {
-    0% {
-        margin-top: 0;
-    }
-
-    50% {
-        margin-top: @animation_distance;
+        margin-top: $animation_distance;
     }
 
     100% {
@@ -204,7 +170,7 @@ h2 {
 }
 
 .block-2 {
-    background: @yellow;
+    background: $yellow;
     font-size: 2em;
     text-align: center;
     line-height: 1.5em;
@@ -212,7 +178,7 @@ h2 {
     position: relative;
 
     h1 {
-        color: darken(@yellow, 30%);
+        color: darken($yellow, 30%);
         display: none;
     }
 
@@ -344,22 +310,18 @@ h2 {
         cursor: pointer;
 
         &.left {
-            left: -@animation_distance;
+            left: -$animation_distance;
 
             &:hover {
                 animation: arrow_left 1s infinite;
-                -webkit-animation: arrow_left 1s infinite;
-                -moz-animation: arrow_left 1s infinite;
             }
         }
 
         &.right {
-            right: @animation_distance;
+            right: $animation_distance;
 
             &:hover {
                 animation: arrow_right 1s infinite;
-                -webkit-animation: arrow_right 1s infinite;
-                -moz-animation: arrow_right 1s infinite;
             }
         }
     }
@@ -615,10 +577,10 @@ h2 {
 }
 
 .block-5 {
-    background: @gray;
+    background: $gray;
 
     h1 {
-        color: darken(@gray, 40%);
+        color: darken($gray, 40%);
     }
 
     .wrapper {
@@ -636,14 +598,14 @@ h2 {
     a, a:active, a:visited {
         display: inline-block;
         text-align: center;
-        //border: solid 5px lighten(@gray, 20%);
-        //background: darken(@gray, 10%);
+        //border: solid 5px lighten($gray, 20%);
+        //background: darken($gray, 10%);
         border-radius: 100%;
         font-size: 3.5em;
         width: 3em;
         height: 3em;
         line-height: 3em;
-        color: darken(@gray, 13%);
+        color: darken($gray, 13%);
         text-decoration: none;
         transition: all .2s linear;
         -webkit-transition: all .2s linear;
@@ -651,8 +613,8 @@ h2 {
     }
 
     a:hover {
-        background: darken(@gray, 5%);
-        //border: solid 5px darken(@gray, 20%);
+        background: darken($gray, 5%);
+        //border: solid 5px darken($gray, 20%);
 
         &.icon-twitter {
             color: #51a6e7;
@@ -680,7 +642,7 @@ h2 {
         text-align: center;
         bottom: 2em;
         width: 100%;
-        color: darken(@gray, 40%);
+        color: darken($gray, 40%);
         word-spacing: 0.2em;
 
         b {
@@ -690,11 +652,11 @@ h2 {
 }
 
 .block-3 {
-    background: @blue;
-    @darker_colour: darken(@blue, 25%);
+    background: $blue;
+    $darker_colour: darken($blue, 25%);
 
     h1 {
-        color: darken(@darker_colour, 10%);
+        color: darken($darker_colour, 10%);
     }
 
     img {
@@ -769,7 +731,7 @@ h2 {
             margin-right: 1em;
             line-height: 0.9em;
             font-family: 'Uni Sans',sans-serif;
-            color: @darker_colour;
+            color: $darker_colour;
         }
 
         .txt {
@@ -780,7 +742,7 @@ h2 {
 
         i {
             font-size: 1.5em;
-            color: lighten(@blue, 12%);
+            color: lighten($blue, 12%);
 
             &.yes {
                 color: #fff;
@@ -804,7 +766,7 @@ h2 {
     text-align: left;
     line-height: 2em;
 
-    @foldcolor: #E16B5F;
+    $foldcolor: #E16B5F;
 
 
     .fold {
@@ -812,7 +774,7 @@ h2 {
         height: 0;
         border-style: solid;
         border-width: 2em 2em 0 0;
-        border-color: transparent @foldcolor transparent transparent;
+        border-color: transparent $foldcolor transparent transparent;
         position: absolute;
         top: 0;
         left: -2em;
@@ -833,7 +795,7 @@ h2 {
         height: 0;
         border-style: solid;
         border-width: 3em 6.4em 0 0;
-        border-color: @foldcolor transparent transparent transparent;
+        border-color: $foldcolor transparent transparent transparent;
         position: absolute;
         bottom: -2.9em;
         left: -2em;

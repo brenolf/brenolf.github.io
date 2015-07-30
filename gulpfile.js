@@ -1,5 +1,5 @@
 var gulp        = require('gulp'),
-    less        = require('gulp-less'),
+    sass        = require('gulp-sass'),
     minifyCSS   = require('gulp-minify-css'),
     prefixer    = require('gulp-autoprefixer'),
     rename      = require('gulp-rename'),
@@ -36,8 +36,8 @@ gulp.task ('vendor-styles', function () {
 
 gulp.task ('styles', ['vendor-styles', 'copy-fonts'], function () {
   return gulp
-  .src('./style/*.less')
-  .pipe(less())
+  .src('./style/*')
+  .pipe(sass())
   .pipe(prefixer())
   .pipe(minifyCSS())
   .pipe(gulp.dest(assets + '/css'));
@@ -80,4 +80,10 @@ gulp.task ('deploy', ['default'], function() {
     branch: 'master',
     cname: 'breno.io'
   }));
+});
+
+gulp.task ('watch', ['default'], function () {
+    gulp.watch('./js/**/*.js', ['scripts']);
+    gulp.watch('./style/**/*', ['styles']);
+    gulp.watch('./src/html/**/*', ['html']);
 });

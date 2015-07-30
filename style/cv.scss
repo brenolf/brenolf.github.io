@@ -3,7 +3,7 @@
 // font-family: 'Noto Sans', sans-serif; --> normal
 // font-family: 'Josefin Sans', sans-serif; --> titles
 
-@default_margin: 11em;
+$default_margin: 11em;
 
 body, html {
     width: 100%;
@@ -82,7 +82,7 @@ header {
     }
 
     ul {
-        margin-left: @default_margin;
+        margin-left: $default_margin;
     }
 }
 
@@ -108,7 +108,7 @@ section {
     }
 
     & > .block {
-        margin-left: @default_margin;
+        margin-left: $default_margin;
         margin-bottom: 2em;
         font-size: 0.9em;
         color: #333;
