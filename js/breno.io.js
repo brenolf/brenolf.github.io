@@ -128,11 +128,9 @@ $(document).ready(function(){
     anchors: ['hello', 'me', 'services', 'awards', 'work', 'contact'],
     menu: '#menu',
     responsive: 709,
-
-    onLeave: function(index, nextIndex, direction) {
-      $('#menu li:nth-child(' + index + ') i').removeClass().addClass('icon-circle-thin');
-      $('#menu li:nth-child(' + nextIndex + ') i').removeClass().addClass('icon-circle');
-    },
+    css3: true,
+    navigation: true,
+    navigationPosition: 'left',
 
     afterRender : function () {
       load();

@@ -85,5 +85,5 @@ gulp.task ('deploy', ['default'], function() {
 gulp.task ('watch', ['default'], function () {
     gulp.watch('./js/**/*.js', ['scripts']);
     gulp.watch('./style/**/*', ['styles']);
-    gulp.watch('./src/html/**/*', ['html']);
+    gulp.watch('./html/**/*', ['html']);
 });
