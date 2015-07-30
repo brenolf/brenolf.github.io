@@ -35,7 +35,6 @@ body, html {
 
 section {
     height: 100%;
-    position: relative;
     background-attachment: fixed;
     overflow: hidden;
 }
@@ -175,7 +174,6 @@ h2 {
     text-align: center;
     line-height: 1.5em;
     font-size: 1.5em;
-    position: relative;
 
     h1 {
         color: darken($yellow, 30%);
@@ -189,7 +187,6 @@ h2 {
 
 .block-6 {
     background: #F47E35;
-    position: relative;
 
     h1 {
         color: darken(#F47E35, 20%);
@@ -214,7 +211,6 @@ h2 {
                 text-decoration: none;
                 opacity: 0.8;
                 transition: all .2s linear;
-                -webkit-transition: all .2s linear;
 
                 &:after {
                     content: "\e80c";
@@ -263,13 +259,10 @@ h2 {
 
 .block-4 {
     background: #60a928;
-    transition: background .2s linear;
-    -webkit-transition: background .2s linear;
 
     h1 {
         color: darken(#60a928, 20%);
         transition: color .2s linear;
-        -webkit-transition: color .2s linear;
     }
 
     h2 {
@@ -362,7 +355,6 @@ h2 {
             text-align: left;
 
             transition: color .2s linear;
-            -webkit-transition: color .2s linear;
         }
 
         b {
@@ -388,7 +380,6 @@ h2 {
             color: #777;
             text-decoration: none;
             transition: all .2s linear;
-            -webkit-transition: all .2s linear;
             cursor: pointer;
 
             &:hover {
@@ -411,7 +402,6 @@ h2 {
             color: #777;
             text-decoration: none;
             transition: all .2s linear;
-            -webkit-transition: all .2s linear;
             cursor: pointer;
 
             &:hover {
@@ -545,9 +535,7 @@ h2 {
             font-size: 1.5em;
             line-height: 4em;
             text-align: left;
-
             transition: color .2s linear;
-            -webkit-transition: color .2s linear;
         }
 
         b {
@@ -592,7 +580,6 @@ h2 {
         color: darken($gray, 13%);
         text-decoration: none;
         transition: all .2s linear;
-        -webkit-transition: all .2s linear;
         margin: 0.5em;
     }
 
