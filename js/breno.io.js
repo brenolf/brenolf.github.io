@@ -121,11 +121,10 @@ $(document).ready(function(){
   change_postit();
 
   $('#fullpage').pagepiling({
-    verticalCentered: false,
     anchors: ['hello', 'me', 'services', 'awards', 'work', 'contact'],
     css3: true,
     navigation: {
-      'position': 'left'
+      'position': 'right'
     },
 
     afterRender : function () {

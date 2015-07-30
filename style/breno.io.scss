@@ -275,8 +275,6 @@ h2 {
 
     .projects {
         width: 100%;
-        position: absolute;
-        bottom: 0;
     }
 
     .arrow {
@@ -413,7 +411,7 @@ h2 {
 
     .logo {
         width: 40%;
-        height: 80%;
+        height: 70%;
         position: relative;
         padding: 5%;
 
@@ -524,7 +522,7 @@ h2 {
 
     .panel {
         background-color: #fff;
-        height: 30em;
+        height: 38em;
 
         & > div {
             height: 100%;
@@ -540,7 +538,7 @@ h2 {
 
         b {
             display: block;
-            width: 30%;
+            width: 25%;
             height: 3px;
             background: #60a928;
             margin: 0.5em 0 1em 0;
@@ -559,12 +557,6 @@ h2 {
         width: 100%;
         height: 10.5em;
         text-align: center;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        position: absolute;
     }
 
     a, a:active, a:visited {
@@ -1141,20 +1133,16 @@ only screen and (min-resolution: 192dpi) {
 }
 
 @media (min-width: 565px) and (max-width: 709px) {
-    section {
-        height: auto !important;
-    }
-
-    .block-1 {
-        height: 60em !important;
-    }
-
     .menu {
         font-size: 1.5em;
     }
 
     body {
         font-size: 9px;
+    }
+
+    li {
+        font-size: 0.7em;
     }
 
     .speechbubble {
@@ -1219,8 +1207,7 @@ only screen and (min-resolution: 192dpi) {
         }
 
         .wrapper {
-            position: relative !important;
-            width: 8em;
+            font-size: 1.8em;
             height: auto;
         }
 
@@ -1231,24 +1218,20 @@ only screen and (min-resolution: 192dpi) {
 }
 
 @media (min-width: 100px) and (max-width: 564px) {
-    section {
-        height: auto !important;
-    }
-
-    .block-1 {
-        height: 60em !important;
+    body {
+        font-size: 8px;
     }
 
     .menu {
         font-size: 1.3em;
     }
 
-    body {
-        font-size: 9px;
-    }
-
     h1 {
         font-size: 4em;
+    }
+
+    li {
+        font-size: 0.9em;
     }
 
     .block-1 {
@@ -1270,7 +1253,7 @@ only screen and (min-resolution: 192dpi) {
     .bio {
         display: block;
         font-size: 1.5em;
-        width: 80%;
+        width: 70%;
         margin: 10% auto 1em auto;
         line-height: 1.4em;
     }
@@ -1313,8 +1296,7 @@ only screen and (min-resolution: 192dpi) {
         }
 
         .wrapper {
-            position: relative !important;
-            width: 8em;
+            font-size: 1.8em;
             height: auto;
         }
 
