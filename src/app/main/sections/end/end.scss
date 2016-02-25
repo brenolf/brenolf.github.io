@@ -1,0 +1,30 @@
+.end {
+  background: $blueDianne;
+  padding: 5em;
+  text-align: center;
+
+  img {
+    height: 3.5em;
+    margin-bottom: 1.5em;
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__links {
+    margin: 0 auto;
+
+    a {
+      color: $gableGreen;
+      font-size: 2em;
+      line-height: 2.1em;
+      margin: 0 0.7em;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $ming;
+      }
+    }
+  }
+}

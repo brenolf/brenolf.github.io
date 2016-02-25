@@ -1,89 +1,29 @@
-var gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    minifyCSS   = require('gulp-minify-css'),
-    prefixer    = require('gulp-autoprefixer'),
-    rename      = require('gulp-rename'),
-    concat      = require('gulp-concat'),
-    img         = require('gulp-imagemin'),
-    uglify      = require('gulp-uglify'),
-    ghPages     = require('gulp-gh-pages-cname'),
-    copy        = require('gulp-copy'),
-    htmlmin     = require('gulp-html-minify'),
-    del         = require('del');
+/**
+ *  Welcome to your gulpfile!
+ *  The gulp tasks are splitted in several files in the gulp directory
+ *  because putting all here was really too long
+ */
 
-var assets = './build/assets';
+'use strict';
 
-gulp.task ('default', ['styles', 'scripts', 'img', 'copy-pdf', 'html']);
+var gulp = require('gulp');
+var wrench = require('wrench');
 
-gulp.task ('scripts', ['vendor-scripts'], function () {
-  return gulp
-  .src('./js/*.js')
-  .pipe(uglify())
-  .pipe(gulp.dest(assets + '/js'));
+/**
+ *  This will load all js or coffee files in the gulp directory
+ *  in order to load all gulp tasks
+ */
+wrench.readdirSyncRecursive('./gulp').filter(function(file) {
+  return (/\.(js|coffee)$/i).test(file);
+}).map(function(file) {
+  require('./gulp/' + file);
 });
 
-gulp.task ('vendor-scripts', function () {
-  return gulp
-  .src('./js/vendor/*')
-  .pipe(gulp.dest(assets + '/js/vendor'));
-});
 
-gulp.task ('vendor-styles', function () {
-  return gulp
-  .src('./style/vendor/*')
-  .pipe(gulp.dest(assets + '/css/vendor'));
-});
-
-gulp.task ('styles', ['vendor-styles', 'copy-fonts'], function () {
-  return gulp
-  .src('./style/*')
-  .pipe(sass({includePaths: './style/shims/'}))
-  .pipe(prefixer())
-  .pipe(minifyCSS())
-  .pipe(gulp.dest(assets + '/css'));
-});
-
-gulp.task ('html', function () {
-  return gulp
-  .src('./html/**/*.html')
-  .pipe(htmlmin())
-  .pipe(gulp.dest('./build'));
-});
-
-gulp.task ('img', function() {
-  return gulp
-  .src('./img/*')
-  .pipe(img())
-  .pipe(gulp.dest(assets + '/img'));
-});
-
-gulp.task ('copy-pdf', function () {
-  return gulp
-  .src('./pdf/*')
-  .pipe(gulp.dest(assets + '/pdf'));
-});
-
-gulp.task ('copy-fonts', function () {
-  return gulp
-  .src('./font/*')
-  .pipe(gulp.dest(assets + '/font'));
-});
-
-gulp.task ('clean', function () {
-  del(['./build', './*.publish']);
-});
-
-gulp.task ('deploy', ['default'], function() {
-  return gulp
-  .src('./build/**/*')
-  .pipe(ghPages({
-    branch: 'master',
-    cname: 'breno.io'
-  }));
-});
-
-gulp.task ('watch', ['default'], function () {
-    gulp.watch('./js/**/*.js', ['scripts']);
-    gulp.watch('./style/**/*', ['styles']);
-    gulp.watch('./html/**/*', ['html']);
+/**
+ *  Default task clean temporaries directories and launch the
+ *  main optimization build task
+ */
+gulp.task('default', ['clean'], function () {
+  gulp.start('build');
 });

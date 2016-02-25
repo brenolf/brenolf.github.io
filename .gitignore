@@ -1,6 +1,7 @@
-build
-*.publish
-*.sublime-project
-*.sublime-workspace
-.DS_Store
-node_modules
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/

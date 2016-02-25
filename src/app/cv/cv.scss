@@ -1,0 +1,183 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Josefin+Sans:400,700);
+
+.cv {
+  font-family: 'Noto Sans', sans-serif;
+
+  padding: 10%;
+  box-sizing: border-box;
+  width: 100%;
+
+  $default_margin: 11em;
+
+  h3 {
+    color: #333;
+    text-align: left;
+  }
+
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  #langs {
+    position: fixed;
+    top: 1.5em;
+    right: 1.5em;
+    z-index: 10;
+  }
+
+  h1, h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 1em;
+      color: #777;
+    }
+  }
+
+  article {
+    width: 71em;
+    margin: 4em auto;
+  }
+
+  .column {
+    float: left;
+
+    &.side {
+      margin-left: 3em;
+    }
+  }
+
+  section, header {
+    margin-bottom: 4em;
+  }
+
+  header {
+    font-size: 0.9em;
+
+    h1 {
+      font-size: 2em !important;
+    }
+
+    b {
+      color: #555;
+    }
+
+    i {
+      color: #444;
+      margin-right: 1em;
+    }
+
+    ul {
+      margin-left: $default_margin;
+    }
+  }
+
+  section {
+    position: relative;
+
+    h2 {
+      font-size: 1em;
+      color: #444;
+      letter-spacing: 0.1em;
+      position: absolute;
+      left: 0;
+      top: .3em;
+      text-align: right;
+      width: 8em;
+    }
+
+    h3 {
+      font-size: 1em;
+      line-height: 1.4em;
+      margin-bottom: 0.6em;
+      text-transform: uppercase;
+    }
+
+    & > .block {
+      margin-left: $default_margin;
+      margin-bottom: 2em;
+      font-size: 0.9em;
+      color: #333 !important;
+      max-width: 25em;
+
+      li {
+        span {
+          display: inline-block;
+          width: 13em;
+          color: #333 !important;
+        }
+      }
+
+      div {
+        display: block;
+        margin-bottom: 0.6em;
+
+        &.specific {
+          color: #777;
+
+          span {
+            display: inline-block;
+          }
+
+          .date {
+            width: 13em;
+          }
+        }
+
+        &.general {
+          width: 25em;
+        }
+      }
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+
+  #langs {
+    display: none;
+  }
+}
+
+@media print {
+  .cv {
+    font-size: 12pt;
+    margin: 0mm;
+    padding: 0mm;
+    height: 270mm;
+    width: 210mm;
+    padding: 10pt 5pt 5pt 25pt;
+    page-break-after: avoid;
+  }
+
+  #langs {
+    display: none;
+  }
+
+}

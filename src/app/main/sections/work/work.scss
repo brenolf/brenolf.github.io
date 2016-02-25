@@ -1,0 +1,70 @@
+$work__colors: #142932, #162F37, #2F4954, #162F37, #2F4954, #142932;
+
+.work {
+  padding: 5em;
+
+  &__list {
+    margin: 0 auto;
+
+    &__card {
+      padding: 0.5em;
+      box-sizing: border-box;
+
+      &__wrapper {
+        padding: 2em 1em;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        min-height: 25em;
+        display: block;
+        color: white;
+        transition: box-shadow 0.1s;
+
+        &:hover {
+          box-shadow: 0 2px 4px $blueDianne;
+        }
+
+        &__img {
+          height: 10em;
+          position: relative;
+          border-bottom: solid 1px white;
+          padding-bottom: 1.5em;
+
+          img {
+            max-width: 10em;
+            max-height: 7.5em;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          }
+        }
+
+        h4 {
+          font-size: 1.2em;
+          margin: 1.5em 0;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+        }
+
+        p {
+          line-height: 1.5em;
+          font-weight: 400;
+          font-size: 0.9em;
+        }
+      }
+
+      @for $i from 0 to 6 {
+        &--card#{$i} &__wrapper {
+          background-image: url(../assets/images/bgs/#{$i}.png);
+        }
+
+        &--color#{$i} &__wrapper {
+          background-color: nth($work__colors, $i + 1);
+        }
+      }
+    }
+  }
+}

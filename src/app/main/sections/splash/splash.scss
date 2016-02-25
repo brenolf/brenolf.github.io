@@ -1,0 +1,84 @@
+$splash__size: 4.5em;
+
+.splash {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/images/bg-1.jpg);
+  background-size: cover;
+  position: relative;
+
+  img {
+    height: 1.4em;
+    margin-bottom: 0.3em;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 0.9em;
+    cursor: default;
+
+    div {
+      padding: 2em;
+      line-height: $splash__size;
+    }
+  }
+
+  &__links {
+    text-align: right;
+
+    a {
+      display: inline-block;
+      width: $splash__size;
+      height: $splash__size;
+      line-height: $splash__size;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      background: rgba($shark, 0.5);
+      cursor: pointer;
+      transition: background 0.1s ease-in;
+
+      &:hover {
+        background: rgba($shark, 0.8);
+      }
+    }
+
+    div {
+      padding: 2em;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    height: 3em;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    span {
+      text-transform: lowercase;
+      font-family: 'IM Fell Great Primer', cursive;
+      font-weight: 400;
+      margin: 0 0.2em;
+    }
+  }
+
+  &__gradient {
+    height: 10em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.9) 90%,rgba(255,255,255,1) 100%);
+  }
+}
