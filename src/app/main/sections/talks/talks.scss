@@ -18,6 +18,7 @@
     line-height: 2em;
     text-align: center;
     margin: 0 auto;
+    display: block;
   }
 
   a {
@@ -36,6 +37,7 @@
 
   &__piece {
     text-align: left !important;
+    display: inline-block !important;
 
     ul {
       list-style: square;

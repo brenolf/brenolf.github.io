@@ -10,10 +10,12 @@
 
   &__logo {
     margin: 0 auto;
+    display: block;
   }
 
   &__links {
     margin: 0 auto;
+    display: block;
 
     a {
       color: $gableGreen;
