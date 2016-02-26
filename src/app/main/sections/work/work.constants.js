@@ -22,7 +22,7 @@
       {// 3
         name: 'kajoo',
         target: '//kajoo.com.br/',
-        text: 'Developed the backend for a counting system with high-availability and stress requirements with NodeJS and Angular.'
+        text: 'Developed the backend for a counting system with high-availability and stress requirements with NodeJS and a data visualization system with Angular.'
       },
       {// 4
         name: 'polyjuice',
@@ -32,7 +32,7 @@
       {// 5
         name: 'breno',
         target: '//www.behance.net/gallery/23135823/Personal-2015-website',
-        text: 'I always change my personal page, it\'s like the feeling of always have it fresh, that\'s why I also keep my old layouts as landmarks.'
+        text: 'My personal page is always changin, maybe because of the feeling of always having it fresh.  That\'s why I also keep my old layouts as landmarks of improvement.'
       }
     ]);
 
