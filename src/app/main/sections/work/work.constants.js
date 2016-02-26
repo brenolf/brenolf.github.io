@@ -32,7 +32,7 @@
       {// 5
         name: 'breno',
         target: '//www.behance.net/gallery/23135823/Personal-2015-website',
-        text: 'My personal page is always changin, maybe because of the feeling of always having it fresh.  That\'s why I also keep my old layouts as landmarks of improvement.'
+        text: 'My personal page is always changing, maybe because of the feeling of always having it fresh.  That\'s why I also keep my old layouts as landmarks of improvement.'
       }
     ]);
 
