@@ -22,7 +22,7 @@
       {// 3
         name: 'kajoo',
         target: '//kajoo.com.br/',
-        text: 'Developed the backend for a counting system with high-availability and stress requirements with NodeJS and a data visualization system with Angular.'
+        text: 'Developed the backend for a counting system with high-availability and stress requirements with NodeJS and a data visualization system with AngularJS and SocketIO.'
       },
       {// 4
         name: 'polyjuice',
