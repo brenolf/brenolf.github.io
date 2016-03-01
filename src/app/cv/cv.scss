@@ -159,25 +159,15 @@
 @page {
   size: A4;
   margin: 0;
-
-  #langs {
-    display: none;
-  }
 }
 
 @media print {
   .cv {
-    font-size: 12pt;
+    font-size: 8pt;
     margin: 0mm;
-    padding: 0mm;
     height: 270mm;
     width: 210mm;
-    padding: 10pt 5pt 5pt 25pt;
+    padding: 50pt 25pt;
     page-break-after: avoid;
   }
-
-  #langs {
-    display: none;
-  }
-
 }
