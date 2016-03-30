@@ -19,7 +19,7 @@ $work__colors: #142932, #162F37, #2F4954, #162F37, #2F4954, #142932;
         min-height: 25em;
         display: block;
         color: white;
-        transition: box-shadow 0.1s;
+        transition: box-shadow 0.2s;
 
         &:hover {
           box-shadow: 0 2px 4px $blueDianne;
@@ -67,5 +67,11 @@ $work__colors: #142932, #162F37, #2F4954, #162F37, #2F4954, #142932;
         }
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .work {
+    padding: 2em 0.5em;
   }
 }

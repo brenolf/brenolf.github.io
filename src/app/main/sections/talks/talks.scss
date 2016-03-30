@@ -41,11 +41,18 @@
 
     ul {
       list-style: square;
+      list-style-position: inside;
     }
 
     li {
       font-size: 0.9em;
       line-height: 3em;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .talks {
+    display: none;
   }
 }
