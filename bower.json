@@ -5,10 +5,9 @@
     "angular-sanitize": "~1.4.2",
     "angular-ui-router": "~0.2.15",
     "angular": "~1.4.2",
-    "grids-min": "http://yui.yahooapis.com/pure/0.6.0/grids-min.css",
-    "grids-responsive-min": "http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css",
     "angular-scroll": "^1.0.0",
-    "components-font-awesome": "^4.5.0"
+    "components-font-awesome": "^4.5.0",
+    "toast-css": "^1.1.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"

@@ -1,28 +1,24 @@
 .about {
   padding: 5em;
 
-  i {
-    display: block;
-    text-align: center;
-    margin-bottom: 0.9em;
-    font-size: 1.2em;
-    color: $ming;
-  }
-
-  div {
+  &__text {
     line-height: 2em;
     text-align: center;
     margin: 0 auto;
     display: block;
-  }
 
-  a {
-    color: $shark;
-    text-decoration: underline;
-    transition: color 0.1s;
+    &__link {
+      color: $shark;
+      text-decoration: underline;
+      transition: color 0.1s;
 
-    &:hover {
-      color: $blueDianne;
+      &:visited {
+        color: $shark;
+      }
+
+      &:hover {
+        color: $blueDianne;
+      }
     }
   }
 }

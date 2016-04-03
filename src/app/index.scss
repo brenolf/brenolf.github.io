@@ -1,3 +1,5 @@
+$toast-gutter-width: 0 !important;
+
 /* Do not remove the comments below. It's the markers used by wiredep to inject
    sass dependencies when defined in the bower.json of your dependencies */
 // bower:scss
@@ -36,13 +38,10 @@ a {
   text-decoration: none;
 }
 
-body, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-  font-family: 'Montserrat', sans-serif !important;
-}
-
 body {
+  font-family: 'Montserrat', sans-serif !important;
   color: $shark;
+  line-height: 2em;
 }
 
 h2, h3 {

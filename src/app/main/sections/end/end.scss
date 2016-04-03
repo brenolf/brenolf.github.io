@@ -30,3 +30,10 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .end__links a {
+    display: block;
+    font-size: 2.1em;
+  }
+}

@@ -21,6 +21,10 @@
   }
 
   /** @ngInject */
-  function TalksController() {
+  function TalksController(TEXTS, TALKS) {
+    var vm = this;
+
+    vm.TEXTS = TEXTS;
+    vm.TALKS = TALKS;
   }
 })();

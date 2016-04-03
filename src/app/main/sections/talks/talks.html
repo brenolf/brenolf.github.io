@@ -1,41 +1,29 @@
 <article class="talks" id="talks">
   <h2>talks &amp; texts</h2>
 
-  <article class="pure-g talks__intro">
-    <div class="pure-u-1 pure-u-md-2-3">
-      I always try to make things that matter, and that's why I eventually end up giving some talks on many different subjects. I also like writting, even though I'm not good at allocating time slots in order to do it more often. Here's a selection of my previous talks, papers and articles.
+  <div class="talks__intro grid__col grid__col--2-of-3 grid__col--centered">
+    I always try to make things that matter, and that's why I eventually end up giving some talks on many different subjects. I also like writting, even though I'm not good at allocating time slots in order to do it more often. Here's a selection of my previous talks, papers and articles.
+  </div>
+
+  <div>
+    <div class="grid__col grid__col--2-of-6 grid__col--push-1-of-6 talks__piece">
+      <h3 class="talks__piece__subtitle">Talks</h3>
+
+      <ul class="talks__piece__list">
+        <li ng-repeat="talk in vm.TALKS">
+          <a class="talks__piece__list__link" ng-href="{{talk.target}}">{{talk.year}} - {{talk.name}}</a>
+        </li>
+      </ul>
     </div>
-  </article>
 
-  <article class="pure-g">
-    <div class="pure-u-1 pure-u-lg-2-3">
-      <article class="pure-g">
-        <div class="pure-u-1 pure-u-lg-1-2 talks__piece">
-          <h3>Talks</h3>
+    <div class="grid__col grid__col--2-of-6 talks__piece">
+      <h3 class="talks__piece__subtitle">Texts</h3>
 
-          <ul>
-            <li><a href="/assets/pdf/sfc.pdf">2013 - Snarks Fluxo-críticos</a></li>
-            <li><a href="/assets/pdf/es.pdf">2014 - Extending Snarks</a></li>
-            <li><a href="http://slides.com/brenolf/como-eu-fiz-um-jogo-em-javascript#/">2015 - Como eu fiz um jogo em JavaScript?</a></li>
-            <li><a href="http://slides.com/brenolf/es6-rocks#/">2015 - ES6 rocks!</a></li>
-            <li><a href="http://slides.com/brenolf/teoria-e-pratica#/">2015 - Teoria e prática: Conjuntos disjuntos?</a></li>
-            <li><a href="/assets/pdf/scs.pdf">2015 - A Study of Critical Snarks</a></li>
-            <li><a href="https://www.emaze.com/@AILICQCL/algoritmos-genticos-em-javascript">2015 - Algoritmos genéticos em JavaScript</a></li>
-          </ul>
-        </div>
-
-        <div class="pure-u-1 pure-u-lg-1-2 talks__piece">
-          <h3>Texts</h3>
-
-          <ul>
-            <li><a href="/assets/pdf/freitas-silva-lucchesi-15.pdf">2015 - Hypohamiltonian Snarks Have a 5-flow (pre-print)</a></li>
-            <li><a href="https://medium.com/@brenolf/why-i-m-becoming-sassy-8b4fe456558c">2015 - Why I'm becoming sassy</a></li>
-            <li><a href="https://medium.com/@brenolf/plus-one-minus-one-is-not-zero-3eae94c7efcf">2015 - Plus one minus one is not zero*</a></li>
-            <li><a href="https://medium.com/@brenolf/designing-a-designer-2a139d46a68f">2015 - Designing a designer</a></li>
-          </ul>
-        </div>
-
-      </article>
+      <ul class="talks__piece__list">
+        <li ng-repeat="text in vm.TEXTS">
+          <a class="talks__piece__list__link" ng-href="{{text.target}}">{{text.year}} - {{text.name}}</a>
+        </li>
+      </ul>
     </div>
-  </article>
+  </div>
 </article>

@@ -7,11 +7,6 @@ $splash__size: 4.5em;
   background-size: cover;
   position: relative;
 
-  img {
-    height: 1.4em;
-    margin-bottom: 0.3em;
-  }
-
   &__name {
     text-transform: uppercase;
     color: white;
@@ -66,11 +61,20 @@ $splash__size: 4.5em;
     bottom: 0;
     right: 0;
 
-    span {
-      text-transform: lowercase;
-      font-family: 'IM Fell Great Primer', cursive;
-      font-weight: 400;
-      margin: 0 0.2em;
+    &__logo {
+      height: 1.4em;
+      margin-bottom: 1em;
+    }
+
+    &__text {
+      line-height: 1em;
+
+      span {
+        text-transform: lowercase;
+        font-family: 'IM Fell Great Primer', cursive;
+        font-weight: 400;
+        margin: 0 0.2em;
+      }
     }
   }
 

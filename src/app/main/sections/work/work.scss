@@ -8,7 +8,7 @@ $work__colors: #142932, #162F37, #2F4954, #162F37, #2F4954, #142932;
     display: block;
 
     &__card {
-      padding: 0.5em;
+      padding: 1.5em;
       box-sizing: border-box;
 
       &__wrapper {
@@ -31,7 +31,7 @@ $work__colors: #142932, #162F37, #2F4954, #162F37, #2F4954, #142932;
           border-bottom: solid 1px white;
           padding-bottom: 1.5em;
 
-          img {
+          &__element {
             max-width: 10em;
             max-height: 7.5em;
             position: absolute;
@@ -43,14 +43,14 @@ $work__colors: #142932, #162F37, #2F4954, #162F37, #2F4954, #142932;
           }
         }
 
-        h4 {
+        &__title {
           font-size: 1.2em;
           margin: 1.5em 0;
           text-transform: uppercase;
           letter-spacing: 5px;
         }
 
-        p {
+        &__dsc {
           line-height: 1.5em;
           font-weight: 400;
           font-size: 0.9em;
@@ -70,8 +70,12 @@ $work__colors: #142932, #162F37, #2F4954, #162F37, #2F4954, #142932;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .work {
     padding: 2em 0.5em;
+
+    &__list__card {
+      padding: 0.5em 0;
+    }
   }
 }
