@@ -23,6 +23,7 @@ $splash__size: 4.5em;
 
   &__links {
     text-align: right;
+    position: fixed;
 
     a {
       display: inline-block;
