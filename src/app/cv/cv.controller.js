@@ -1,26 +1,14 @@
-(function () {
+(function() {
   'use strict';
 
   angular
     .module('breno.cv')
-    .directive('cv', cv);
+    .controller('CVController', CVController);
 
   /** @ngInject */
-  function cv() {
-    var directive = {
-      restrict: 'E',
-      templateUrl: 'app/cv/cv.html',
-      controller: CVController,
-      controllerAs: 'vm',
-      scope: {
-      },
-      bindToController: true
-    };
-
-    return directive;
-  }
-
-  /** @ngInject */
-  function CVController() {
+  function CVController(DATA) {
+    var vm = this;
+    
+    vm.cv = DATA;
   }
 })();

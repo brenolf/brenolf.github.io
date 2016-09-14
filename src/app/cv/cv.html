@@ -1,12 +1,12 @@
 <article class="cv">
-  <div class="column">
+  <div>
     <header>
       <h1>Breno <b>Lima de Freitas</b></h1>
       <ul>
-        <li><i class="fa fa-globe"></i> breno.io</li>
-        <li><i class="fa fa-envelope"></i> hello@breno.io</li>
-        <li><i class="fa fa-github"></i> github.com/brenolf</li>
-        <li><i class="fa fa-linkedin"></i> ca.linkedin.com/in/brenolf/</li>
+        <li><i class="fa fa-globe"></i> {{vm.cv.social.site}}</li>
+        <li><i class="fa fa-envelope"></i> {{vm.cv.social.email}}</li>
+        <li><i class="fa fa-github"></i> {{vm.cv.social.gh}}</li>
+        <li><i class="fa fa-linkedin"></i> {{vm.cv.social.ln}}</li>
       </ul>
     </header>
 
@@ -14,7 +14,7 @@
       <h2>profile</h2>
 
       <div class="block">
-        Computer scientist with strong mathematical background and experience with Web development, TDD, design and analysis of algorithms and human-computer interface. Also, I am self-taught and possess a constant improvement trait.
+        {{vm.cv.profile}}
       </div>
     </section>
 
@@ -22,169 +22,83 @@
       <h2>objective</h2>
 
       <div class="block">
-        Work in Computer Science field in order to enhance my skills and apply them to solve interesting problems.
+        {{vm.cv.objective}}
       </div>
     </section>
 
     <section>
       <h2>professional experience</h2>
 
-      <div class="block">
-        <h3>World Tech Makers</h3>
+      <div class="block" ng-repeat="entry in vm.cv.professional">
+        <h3>{{entry.company}}</h3>
         <div class="specific">
-          <span class="date">Aug 2015 &#8212; Aug 2016</span>
-          <span class="place">São Paulo, Brazil</span>
+          <span class="date">
+            {{entry.from | date:'MMM yyyy'}}
+            &nbsp;&#8212;&nbsp;
+            {{entry.to | date:'MMM yyyy'}}
+            {{entry.to ? '' : 'Present'}}
+          </span>
+          <span class="place">{{entry.location}}</span>
         </div>
-        <div class="general">Software Engineer</div>
-      </div>
-
-      <div class="block">
-        <h3>Codeminer 42</h3>
-        <div class="specific">
-          <span class="date">Apr 2015 &#8212; Jun 2015</span>
-          <span class="place">Sorocaba, Brazil</span>
-        </div>
-        <div class="general">Intern</div>
-      </div>
-
-      <div class="block">
-        <h3>university of waterloo</h3>
-        <div class="specific">
-          <span class="date">May 2014 &#8212; Aug 2014</span>
-          <span class="place">Waterloo, Canada</span>
-        </div>
-        <div class="general">Undergraduate Research Assistant</div>
-      </div>
-
-      <div class="block">
-        <h3>cultural norte americano</h3>
-        <div class="specific">
-          <span class="date">Jan 2012 &#8212; Dec 2013</span>
-          <span class="place">Indaiatuba, Brazil</span>
-        </div>
-        <div class="general">English language teacher</div>
-      </div>
-
-      <div class="block">
-        <h3>madricomp</h3>
-        <div class="specific">
-          <span class="date">Aug 2010 &#8212; Jan 2011</span>
-          <span class="place">Indaiatuba, Brazil</span>
-        </div>
-        <div class="general">Web Application Developer</div>
+        <div class="general">{{entry.position}}</div>
       </div>
     </section>
-
-    <section>
-      <h2>academic experience</h2>
-
-      <div class="block">
-        <h3>universidade federal de são carlos</h3>
-        <div class="specific">
-          <span class="date">Jul 2013 &#8212; May 2015</span>
-          <span class="place">Sorocaba, Brazil</span>
-        </div>
-        <div class="general">
-          <i>Flow-critical Snarks</i>
-          <div>Supervised by Prof. Cândida Nunes da Silva</div>
-        </div>
-      </div>
-
-      <div class="block">
-        <h3>university of waterloo</h3>
-        <div class="specific">
-          <span class="date">May 2014 &#8212; Aug 2014</span>
-          <span class="place">Waterloo, Canada</span>
-        </div>
-        <div class="general">
-          <i>Extending Snarks</i>
-          <div>Supervised by Prof. Daniel Haven Younger</div>
-        </div>
-      </div>
-
-      <div class="block">
-        <h3>universidade federal de são carlos</h3>
-        <div class="specific">
-          <span class="date">Jan 2013 &#8212; Jul 2013</span>
-          <span class="place">Sorocaba, Brazil</span>
-        </div>
-        <div class="general">
-          <i>Visual Coordinating System</i>
-          <div>Supervised by Prof. José de Oliveira Guimarães</div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="column side">
 
     <section>
       <h2>education</h2>
 
-      <div class="block">
-        <h3>universidade federal de são carlos</h3>
+      <div class="block" ng-repeat="entry in vm.cv.education">
+        <h3>{{entry.school}}</h3>
         <div class="specific">
-          <span class="date">Feb 2016 &#8212; Present</span>
-          <span class="place">Sorocaba, Brazil</span>
+          <span class="date">
+            {{entry.from | date:'MMM yyyy'}}
+            &nbsp;&#8212;&nbsp;
+            {{entry.to | date:'MMM yyyy'}}
+            {{entry.to ? '' : 'Present'}}
+          </span>
+          <span class="place">{{entry.location}}</span>
         </div>
-        <div class="general">Master of Science in Computer Science</div>
+        <div class="general">{{entry.title}}</div>
       </div>
+    </section>
+  </div>
 
-      <div class="block">
-        <h3>universidade federal de são carlos</h3>
-        <div class="specific">
-          <span class="date">Mar 2011 &#8212; Jun 2015</span>
-          <span class="place">Sorocaba, Brazil</span>
-        </div>
-        <div class="general">Bachelor of Science in Computer Science</div>
-      </div>
+  <div>
+    <section>
+      <h2>academic experience</h2>
 
-      <div class="block">
-        <h3>university of toronto</h3>
+      <div class="block" ng-repeat="entry in vm.cv.academic">
+        <h3>{{entry.school}}</h3>
         <div class="specific">
-          <span class="date">Jan 2014 &#8212; Dec 2014</span>
-          <span class="place">Toronto, Canada</span>
+          <span class="date">
+            {{entry.from | date:'MMM yyyy'}}
+            &nbsp;&#8212;&nbsp;
+            {{entry.to | date:'MMM yyyy'}}
+            {{entry.to ? '' : 'Present'}}
+          </span>
+          <span class="place">{{entry.location}}</span>
         </div>
-        <div class="general">Exchange program</div>
-      </div>
-
-      <div class="block">
-        <h3>fundação indaiatubana de educação e cultura</h3>
-        <div class="specific">
-          <span class="date">Jan 2009 &#8212; Dec 2010</span>
-          <span class="place">Indaiatuba, Brazil</span>
+        <div class="general">
+          <i>{{entry.name}}</i>
+          <div>Supervised by {{entry.supervisor}}</div>
         </div>
-        <div class="general">Associate's degree in Web Development</div>
       </div>
     </section>
 
     <section>
       <h2>events</h2>
 
-      <div class="block">
-        <h3>SBC's 34<sup>th</sup> undergraduate researches contest</h3>
+      <div class="block" ng-repeat="entry in vm.cv.events">
+        <h3>{{entry.name}}</h3>
         <div class="specific">
-          <span class="date">Jul 2015</span>
-          <span class="place">Recife, Brazil</span>
+          <span class="date">
+            {{entry.from}}
+            {{entry.to ? '&nbsp;&#8212;&nbsp;' : ''}}
+            {{entry.to}}
+          </span>
+          <span class="place">{{entry.location}}</span>
         </div>
-        <div class="general">1<sup>st</sup> place</div>
-      </div>
-
-      <div class="block">
-        <h3>ACM International Collegiate Programming Contest</h3>
-        <div class="specific">
-          <span class="date">2011 &#8212; 2013</span>
-          <span class="place">Sorocaba, Brazil</span>
-        </div>
-        <div class="general">2<sup>nd</sup> place in 2013's regional phase</div>
-      </div>
-
-      <div class="block">
-        <h3>Google Developer Day</h3>
-        <div class="specific">
-          <span class="date">2011</span>
-          <span class="place">São Paulo, Brazil</span>
-        </div>
+        <div class="general" ng-bind-html="entry.extra"></div>
       </div>
     </section>
 
@@ -193,16 +107,8 @@
 
       <div class="block">
         <ul>
-          <li>
-            <span>Portuguese</span> Native
-          </li>
-
-          <li>
-            <span>English</span> Fluent
-          </li>
-
-          <li>
-            <span>Spanish</span> Limited
+          <li ng-repeat="entry in vm.cv.languages">
+            <span>{{entry.name}}</span> {{entry.level}}
           </li>
         </ul>
       </div>
@@ -211,15 +117,15 @@
     <section>
       <h2>papers</h2>
 
-      <div class="block">
-        <h3>Hypohamiltonian Snarks Have a 5-flow</h3>
+      <div class="block" ng-repeat="entry in vm.cv.papers">
+        <h3>{{entry.name}}</h3>
         <div class="specific">
-          <span class="date">2015</span>
+          <span class="date">{{entry.year}}</span>
           <span class="place"></span>
         </div>
         <div class="general">
-          <i>With Da Silva C.N. and Lucchesi C.L.</i>
-          <div>Electronic Notes in Discrete Mathematics</div>
+          <i>{{entry.coauthors}}</i>
+          <div>{{entry.journal}}</div>
         </div>
       </div>
     </section>
@@ -229,15 +135,7 @@
 
       <div class="block">
         <ul>
-          <li>JavaScript</li>
-          <li>Ruby on Rails</li>
-          <li>Python</li>
-          <li>CSS + Sass</li>
-          <li>HTML5</li>
-          <li>SQL Databases</li>
-          <li>Git</li>
-          <li>C</li>
-          <li>Unix environments</li>
+          <li ng-repeat="entry in vm.cv.skills">{{entry}}</li>
         </ul>
       </div>
     </section>

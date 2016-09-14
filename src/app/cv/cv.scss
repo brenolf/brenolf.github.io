@@ -3,9 +3,11 @@
 .cv {
   font-family: 'Noto Sans', sans-serif;
 
-  padding: 10%;
+  padding: 5%;
   box-sizing: border-box;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 
   $default_margin: 11em;
 
@@ -19,6 +21,7 @@
     -moz-box-sizing: border-box;
     padding: 0;
     margin: 0;
+    line-height: 1.5em;
   }
 
   #langs {
@@ -29,10 +32,10 @@
   }
 
   h1, h2 {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: 'Josefin Sans', sans-serif;
-  margin-bottom: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 1em;
   }
 
   ul {
@@ -43,19 +46,6 @@
     li {
       margin-bottom: 1em;
       color: #777;
-    }
-  }
-
-  article {
-    width: 71em;
-    margin: 4em auto;
-  }
-
-  .column {
-    float: left;
-
-    &.side {
-      margin-left: 3em;
     }
   }
 
@@ -93,14 +83,13 @@
       letter-spacing: 0.1em;
       position: absolute;
       left: 0;
-      top: .3em;
+      top: 0.1em;
       text-align: right;
       width: 8em;
     }
 
     h3 {
       font-size: 1em;
-      line-height: 1.4em;
       margin-bottom: 0.6em;
       text-transform: uppercase;
     }
@@ -110,7 +99,7 @@
       margin-bottom: 2em;
       font-size: 0.9em;
       color: #333 !important;
-      max-width: 25em;
+      max-width: 27em;
 
       li {
         span {
@@ -126,33 +115,15 @@
 
         &.specific {
           color: #777;
+          display: flex;
+          justify-content: space-between;
 
           span {
             display: inline-block;
           }
-
-          .date {
-            width: 13em;
-          }
-        }
-
-        &.general {
-          width: 25em;
         }
       }
     }
-  }
-
-  .clear {
-    clear: both;
-  }
-
-  .left {
-    float: left;
-  }
-
-  .right {
-    float: right;
   }
 }
 
@@ -163,11 +134,11 @@
 
 @media print {
   .cv {
-    font-size: 8pt;
+    font-size: 7.5pt;
     margin: 0mm;
     height: 270mm;
     width: 210mm;
-    padding: 50pt 25pt;
+    padding: 20pt;
     page-break-after: avoid;
   }
 }
