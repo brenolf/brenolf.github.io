@@ -7,8 +7,7 @@
       'ui.router',
       'duScroll',
 
-      'breno.main',
-      'breno.cv'
+      'breno.main'
     ]);
 
 })();

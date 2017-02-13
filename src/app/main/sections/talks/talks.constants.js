@@ -49,7 +49,7 @@
     ])
     .constant('TEXTS', [
       {// 0
-        name: 'Hypohamiltonian Snarks Have a 5-flow (pre-print)',
+        name: 'Hypohamiltonian Snarks Have a 5-flow',
         target: '/assets/pdf/freitas-silva-lucchesi-15.pdf',
         year: 2015,
         language: 'en'

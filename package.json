@@ -17,7 +17,8 @@
     "gulp-imagemin": "^3.0.3"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "gulp serve"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
