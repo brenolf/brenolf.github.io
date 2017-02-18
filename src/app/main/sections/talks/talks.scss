@@ -38,7 +38,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: $mobileMaxWidth) {
   .talks {
     display: none;
   }
