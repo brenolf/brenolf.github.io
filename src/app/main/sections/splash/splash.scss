@@ -103,6 +103,10 @@ $splash__size: 4.5em;
 
     &__inner {
       padding: 0;
+
+      &__hide {
+        display: none !important;
+      }
     }
   }
 }
