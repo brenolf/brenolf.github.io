@@ -2,7 +2,7 @@
   <h2>work</h2>
 
   <div ng-repeat="(index, i) in vm.projects" class="grid__col grid__col--1-of-3 work__list__card work__list__card--card{{i}} work__list__card--color{{index}}">
-    <a class="work__list__card__wrapper" ng-href="{{vm.DATA[i].target}}" target="_blank">
+    <a class="work__list__card__wrapper" ng-href="{{vm.DATA[i].target}}" target="_blank" rel="noopener noreferrer">
       <div class="work__list__card__wrapper__img">
         <img class="work__list__card__wrapper__img__element" ng-src="assets/images/projects/{{i}}.png" alt="project"/>
       </div>
