@@ -11,7 +11,7 @@
 
       <ul class="talks__piece__list">
         <li ng-repeat="talk in vm.TALKS">
-          <a class="talks__piece__list__link" ng-href="{{talk.target}}">{{talk.year}} - {{talk.name}}</a>
+          <a class="talks__piece__list__link" ng-href="{{talk.target}}">{{talk.year}} - [{{talk.language | uppercase}}] {{talk.name}}</a>
         </li>
       </ul>
     </div>
@@ -21,7 +21,7 @@
 
       <ul class="talks__piece__list">
         <li ng-repeat="text in vm.TEXTS">
-          <a class="talks__piece__list__link" ng-href="{{text.target}}">{{text.year}} - {{text.name}}</a>
+          <a class="talks__piece__list__link" ng-href="{{text.target}}">{{text.year}} - [{{text.language | uppercase}}] {{text.name}}</a>
         </li>
       </ul>
     </div>
