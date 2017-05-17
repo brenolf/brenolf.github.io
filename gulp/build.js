@@ -64,7 +64,7 @@ gulp.task('html', ['inject', 'partials'], function () {
       conditionals: true
     }))
     .pipe(htmlFilter.restore)
-    .pipe($.replace('../../bower_components/fontawesome/fonts', '../fonts'))
+    .pipe($.replace('../../bower_components/components-font-awesome/fonts', '../fonts'))
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')))
     .pipe($.size({ title: path.join(conf.paths.dist, '/'), showFiles: true }));
   });
