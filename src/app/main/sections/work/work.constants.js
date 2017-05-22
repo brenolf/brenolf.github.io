@@ -6,7 +6,7 @@
     .constant('PROJECTS', [
       {// 0
         name: 'dash',
-        target: '//dash.breno.io/',
+        target: '//dash.kraiom.com/',
         text: 'A very simple yet challenging browser and mobile game I built from scratch where you must try to memorize different patterns and play as fast as you can.'
       },
       {// 1
