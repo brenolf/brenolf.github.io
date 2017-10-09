@@ -55,7 +55,7 @@
         language: 'en'
       },
       {// 1
-        name: 'Why I\'m becoming sassy',
+        name: 'Why I’m becoming sassy',
         target: 'https://medium.com/@brenolf/why-i-m-becoming-sassy-8b4fe456558c',
         year: 2015,
         language: 'en'
@@ -71,6 +71,13 @@
         target: 'https://medium.com/@brenolf/designing-a-designer-2a139d46a68f',
         year: 2015,
         language: 'en'
+      }
+      ,
+      {// 4
+        name: 'A Minimum Description Classification Method Prototype',
+        target: '/assets/pdf/freitas-almeida-silva-17.pdf',
+        year: 2017,
+        language: 'pt'
       }
     ]);
 
