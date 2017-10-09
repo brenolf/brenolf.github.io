@@ -71,8 +71,7 @@
         target: 'https://medium.com/@brenolf/designing-a-designer-2a139d46a68f',
         year: 2015,
         language: 'en'
-      }
-      ,
+      },
       {// 4
         name: 'A Minimum Description Classification Method Prototype',
         target: '/assets/pdf/freitas-almeida-silva-17.pdf',

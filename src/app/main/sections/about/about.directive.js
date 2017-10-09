@@ -28,7 +28,7 @@
 
     function activate() {
       var today = new Date();
-      var birthdate = new Date(1993, 7, 12, 03, 40);
+      var birthdate = new Date(1993, 7, 12, 3, 40);
       var oneYear = 1000 * 60 * 60 * 24 * 365;
 
       vm.age = Math.floor((today - birthdate) / oneYear);
