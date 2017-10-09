@@ -14,8 +14,11 @@
   "homepage": "https://breno.io/",
   "dependencies": {
     "bower": "^1.8.0",
+    "gifsicle": "^3.0.4",
     "gulp-gh-pages-cname": "^0.5.2",
-    "gulp-imagemin": "^3.0.3"
+    "gulp-imagemin": "^3.0.3",
+    "jpegtran": "^1.0.5",
+    "optipng": "^1.1.0"
   },
   "scripts": {
     "test": "gulp test",
