@@ -45,6 +45,12 @@
         target: 'https://www.emaze.com/@AILICQCL/algoritmos-genticos-em-javascript',
         year: 2015,
         language: 'pt'
+      },
+      {// 7
+        name: 'Aprendiz de Descritores de Mistura Gaussiana',
+        target: '/assets/pdf/msc.pdf',
+        year: 2017,
+        language: 'pt'
       }
     ])
     .constant('TEXTS', [
