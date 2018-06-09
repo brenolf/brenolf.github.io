@@ -51,6 +51,12 @@
         target: '/assets/pdf/msc.pdf',
         year: 2017,
         language: 'pt'
+      },
+      {// 8
+        name: 'How Machine Learning improves the UX of 500K merchants',
+        target: '/assets/pdf/bjs18.pdf',
+        year: 2018,
+        language: 'en'
       }
     ])
     .constant('TEXTS', [
