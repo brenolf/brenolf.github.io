@@ -6,13 +6,13 @@
     .constant('TALKS', [
       {// 0
         name: 'Snarks Fluxo-críticos',
-        target: '/assets/pdf/sfc.pdf',
+        target: 'https://speakerdeck.com/brenolf/snarks-fluxo-criticos',
         year: 2013,
         language: 'pt'
       },
       {// 1
         name: 'Extending Snarks',
-        target: '/assets/pdf/es.pdf',
+        target: 'https://speakerdeck.com/brenolf/extending-snarks',
         year: 2014,
         language: 'en'
       },
@@ -36,7 +36,7 @@
       },
       {// 5
         name: 'A Study of Critical Snarks',
-        target: '/assets/pdf/scs.pdf',
+        target: 'https://speakerdeck.com/brenolf/a-study-of-critical-snarks',
         year: 2015,
         language: 'pt'
       },
@@ -48,13 +48,13 @@
       },
       {// 7
         name: 'Aprendiz de Descritores de Mistura Gaussiana',
-        target: '/assets/pdf/msc.pdf',
+        target: 'https://speakerdeck.com/brenolf/aprendiz-de-descritores-de-mistura-gaussiana',
         year: 2017,
         language: 'pt'
       },
       {// 8
         name: 'How Machine Learning improves the UX of 500K merchants',
-        target: '/assets/pdf/bjs18.pdf',
+        target: 'https://speakerdeck.com/brenolf/how-machine-learning-improves-the-ux-of-500k-merchants?slide=1',
         year: 2018,
         language: 'en'
       }
