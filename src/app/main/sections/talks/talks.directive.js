@@ -24,7 +24,7 @@
   function TalksController(TEXTS, TALKS) {
     var vm = this;
 
-    vm.TEXTS = TEXTS;
-    vm.TALKS = TALKS;
+    vm.TEXTS = TEXTS.reverse();
+    vm.TALKS = TALKS.reverse();
   }
 })();
