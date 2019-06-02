@@ -60,7 +60,7 @@
       },
       {
         // 9
-        name: 'Leveraging Deep Learning to predict GMV for 100k+ shops',
+        name: 'Modern Gold Mining: Leveraging Deep Learning to predict GMV for 100k+ shops',
         target: 'https://speakerdeck.com/brenolf/modern-gold-mining-leveraging-deep-learning-to-predict-gmv-for-100k-plus-shops',
         year: 2019,
         language: 'en'  
