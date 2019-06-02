@@ -54,9 +54,16 @@
       },
       {// 8
         name: 'How Machine Learning improves the UX of 500K merchants',
-        target: 'https://speakerdeck.com/brenolf/how-machine-learning-improves-the-ux-of-500k-merchants?slide=1',
+        target: 'https://speakerdeck.com/brenolf/how-machine-learning-improves-the-ux-of-500k-merchants',
         year: 2018,
         language: 'en'
+      },
+      {
+        // 9
+        name: 'Leveraging Deep Learning to predict GMV for 100k+ shops',
+        target: 'https://speakerdeck.com/brenolf/modern-gold-mining-leveraging-deep-learning-to-predict-gmv-for-100k-plus-shops',
+        year: 2019,
+        language: 'en'  
       }
     ])
     .constant('TEXTS', [
